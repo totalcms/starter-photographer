@@ -1,0 +1,52 @@
+{
+    "id": "golden-hour",
+    "name": "Golden Hour",
+    "price": 720,
+    "length": "90 minutes",
+    "bestFor": "Couples and growing families",
+    "summary": "The session most people choose. We meet before the light turns and stay until it goes.",
+    "includes": [
+        "50 edited photos",
+        "Your choice of location, with help scouting",
+        "Private online gallery",
+        "One 16 \u00d7 24 in. fine art print"
+    ],
+    "image": {
+        "alt": "A woman standing in a sunlit forest clearing with the sun low behind her",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "150ca8c2",
+        "height": 1200,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "clearing-at-dusk.jpg",
+        "palette": [
+            "#e8c23f",
+            "#8d6224",
+            "#f5efdf",
+            "#191515",
+            "#efda9c"
+        ],
+        "size": 626289,
+        "tags": [],
+        "uploadDate": "2026-11-05T22:50:13-08:00",
+        "width": 1800,
+        "credit": {
+            "author": "Nirmal Rajendharkumar",
+            "authorUrl": "https://www.pexels.com/@nirmal-rajendharkumar-1577471/",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/3030036/",
+            "license": "Pexels License"
+        }
+    },
+    "order": 2,
+    "featured": true,
+    "updated": "2026-11-05T22:50:13-08:00",
+    "created": "2026-11-05T22:50:13-08:00"
+}

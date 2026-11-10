@@ -1,0 +1,11 @@
+{#
+	Shown for any address that doesn't exist. Set in config under "notfound".
+#}
+{% extends 'layouts/default.twig' %}
+
+{% block content %}
+	{% include 'partials/band.twig' with {title: 'Off the trail', intro: "That page isn't here. It may have moved, or the link may be old."} %}
+	<section class="sheet section">
+		<p><a class="button" href="{{ cms.builder.url('home') }}">Back to the home page</a></p>
+	</section>
+{% endblock %}

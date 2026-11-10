@@ -1,0 +1,150 @@
+{
+    "id": "two-in-the-pines",
+    "title": "Two in the Pines",
+    "genre": "People Outdoors",
+    "location": "Mountain forest, late summer",
+    "season": "Summer 2026",
+    "date": "2026-08-30T00:00:00-07:00",
+    "featured": true,
+    "draft": false,
+    "summary": "A couple, a pine forest and one slow afternoon. No posing, just a long walk.",
+    "story": "<p>They asked for somewhere that felt like them, so we skipped the viewpoint and walked into the trees. The forest did the rest: soft light, long lines, and enough quiet that they forgot I was there.</p><p>We stayed until the sun dropped behind the ridge, and most of what's here came from the last half hour.</p>",
+    "gallery": [
+        {
+            "alt": "A couple standing small among the trunks of a tall dark pine forest",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "3447915b",
+            "height": 1200,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "pines-wide.jpg",
+            "palette": [
+                "#bab4a3",
+                "#827962",
+                "#16120b",
+                "#696650",
+                "#5c523c"
+            ],
+            "size": 554809,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:00-08:00",
+            "width": 1800,
+            "credit": {
+                "author": "Pavel Danilyuk",
+                "authorUrl": "https://www.pexels.com/@pavel-danilyuk/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/6966762/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "A couple embracing far off among bare pine trunks and mossy boulders",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "e9f58fdd",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "pines-small-figures.jpg",
+            "palette": [
+                "#beb9aa",
+                "#847e6a",
+                "#1b170e",
+                "#5e5743",
+                "#6b6c56"
+            ],
+            "size": 606325,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:00-08:00",
+            "width": 1200,
+            "credit": {
+                "author": "Pavel Danilyuk",
+                "authorUrl": "https://www.pexels.com/@pavel-danilyuk/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/6966748/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "A man and woman face to face, holding hands in a pine forest",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "5e6ce6b4",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "pines-close.jpg",
+            "palette": [
+                "#cecfcc",
+                "#9b8970",
+                "#b0afa3",
+                "#302a1b",
+                "#7f7863"
+            ],
+            "size": 329684,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:01-08:00",
+            "width": 1200,
+            "credit": {
+                "author": "Pavel Danilyuk",
+                "authorUrl": "https://www.pexels.com/@pavel-danilyuk/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/6966757/",
+                "license": "Pexels License"
+            }
+        }
+    ],
+    "seo": {
+        "id": "seo",
+        "title": "",
+        "socialTitle": "",
+        "description": "",
+        "socialDescription": "",
+        "image": {
+            "alt": "",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "",
+            "height": 0,
+            "link": "",
+            "mime": "",
+            "name": "",
+            "palette": [],
+            "size": 0,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:00-08:00",
+            "width": 0
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    },
+    "updated": "2026-11-05T23:13:35-08:00",
+    "created": "2026-11-05T22:50:00-08:00",
+    "tint": 5
+}

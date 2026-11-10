@@ -1,0 +1,19 @@
+{#
+	About: the portrait, the introduction and the story, all from Studio Info.
+#}
+{% extends 'layouts/default.twig' %}
+{% import 'macros/photo.twig' as photo %}
+
+{% block photo %}{{ photo.color(info.portrait, 3) }}{% endblock %}
+
+{% block content %}
+	{% include 'partials/band.twig' with {title: page.title, intro: info.intro} %}
+
+	<article class="sheet section grid" data-tracks="12" data-threshold="md" data-gap="lg">
+		<div data-span="5">{{ cms.render.image(info, {w: 900, h: 1200, fit: 'crop'}, {collection: 'info', property: 'portrait', loading: 'eager'}) }}</div>
+		<div class="stack" data-span="6" data-start="7" data-gap="lg">
+			<div class="prose">{{ info.story|raw }}</div>
+			<p><a class="button" href="{{ cms.builder.url('contact') }}">Book a session</a></p>
+		</div>
+	</article>
+{% endblock %}

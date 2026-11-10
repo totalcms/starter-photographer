@@ -1,0 +1,276 @@
+{
+    "groups": [
+        {
+            "id": "admin",
+            "description": "Full administrative access to all features",
+            "operations": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ],
+            "permissions": {
+                "collectionsMeta": {
+                    "operations": [
+                        "create",
+                        "read",
+                        "update",
+                        "delete"
+                    ],
+                    "all": true,
+                    "allowed": []
+                },
+                "collections": {
+                    "operations": [
+                        "create",
+                        "read",
+                        "update",
+                        "delete"
+                    ],
+                    "all": true,
+                    "allowed": []
+                },
+                "schemas": {
+                    "operations": [
+                        "create",
+                        "read",
+                        "update",
+                        "delete"
+                    ],
+                    "all": true,
+                    "allowed": []
+                },
+                "builder": true,
+                "mailer": true,
+                "playground": true,
+                "dataviews": true,
+                "docs": true,
+                "inlineEdit": true,
+                "utils": {
+                    "all": true,
+                    "allowed": []
+                },
+                "settings": {
+                    "all": true,
+                    "allowed": []
+                },
+                "extensions": {
+                    "all": true,
+                    "allowed": []
+                }
+            }
+        },
+        {
+            "id": "client",
+            "description": "For the photographer: edit content and read enquiries, without touching settings or templates.",
+            "operations": [],
+            "permissions": {
+                "collectionsMeta": {
+                    "operations": [],
+                    "all": false,
+                    "allowed": []
+                },
+                "collections": {
+                    "operations": [
+                        "create",
+                        "read",
+                        "update",
+                        "delete"
+                    ],
+                    "all": false,
+                    "allowed": [
+                        "info",
+                        "projects",
+                        "sessions",
+                        "testimonials",
+                        "questions",
+                        "prints",
+                        "journal",
+                        "enquiries",
+                        "client-galleries"
+                    ]
+                },
+                "schemas": {
+                    "operations": [],
+                    "all": false,
+                    "allowed": []
+                },
+                "utils": {
+                    "all": false,
+                    "allowed": []
+                },
+                "settings": {
+                    "all": false,
+                    "allowed": []
+                },
+                "extensions": {
+                    "all": false,
+                    "allowed": []
+                },
+                "builder": false,
+                "mailer": false,
+                "playground": false,
+                "dataviews": false,
+                "docs": false,
+                "inlineEdit": false
+            }
+        },
+        {
+            "id": "default",
+            "description": "Default access for users without group assignments",
+            "operations": [
+                "read"
+            ],
+            "permissions": {
+                "collectionsMeta": {
+                    "operations": [
+                        "read"
+                    ],
+                    "all": true,
+                    "allowed": []
+                },
+                "collections": {
+                    "operations": [
+                        "read"
+                    ],
+                    "all": true,
+                    "allowed": []
+                },
+                "schemas": {
+                    "operations": [
+                        "read"
+                    ],
+                    "all": true,
+                    "allowed": []
+                },
+                "builder": false,
+                "mailer": false,
+                "playground": false,
+                "dataviews": false,
+                "docs": true,
+                "inlineEdit": false,
+                "utils": {
+                    "all": false,
+                    "allowed": []
+                },
+                "settings": {
+                    "all": false,
+                    "allowed": []
+                },
+                "extensions": {
+                    "all": true,
+                    "allowed": []
+                }
+            }
+        },
+        {
+            "id": "editor",
+            "description": "Content editors - can create and edit content",
+            "operations": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ],
+            "permissions": {
+                "collectionsMeta": {
+                    "operations": [
+                        "read"
+                    ],
+                    "all": true,
+                    "allowed": []
+                },
+                "collections": {
+                    "operations": [
+                        "create",
+                        "read",
+                        "update",
+                        "delete"
+                    ],
+                    "all": true,
+                    "allowed": []
+                },
+                "schemas": {
+                    "operations": [
+                        "read"
+                    ],
+                    "all": true,
+                    "allowed": []
+                },
+                "builder": true,
+                "mailer": true,
+                "playground": false,
+                "dataviews": false,
+                "docs": true,
+                "inlineEdit": true,
+                "utils": {
+                    "all": false,
+                    "allowed": [
+                        "jumpstart",
+                        "project-setup",
+                        "image-batcher"
+                    ]
+                },
+                "settings": {
+                    "all": false,
+                    "allowed": [
+                        "general",
+                        "dashboard"
+                    ]
+                },
+                "extensions": {
+                    "all": true,
+                    "allowed": []
+                }
+            }
+        },
+        {
+            "id": "viewer",
+            "description": "Read-only access to view content",
+            "operations": [
+                "read"
+            ],
+            "permissions": {
+                "collectionsMeta": {
+                    "operations": [
+                        "read"
+                    ],
+                    "all": true,
+                    "allowed": []
+                },
+                "collections": {
+                    "operations": [
+                        "read"
+                    ],
+                    "all": true,
+                    "allowed": []
+                },
+                "schemas": {
+                    "operations": [
+                        "read"
+                    ],
+                    "all": true,
+                    "allowed": []
+                },
+                "builder": false,
+                "mailer": false,
+                "playground": false,
+                "dataviews": false,
+                "docs": true,
+                "inlineEdit": false,
+                "utils": {
+                    "all": false,
+                    "allowed": []
+                },
+                "settings": {
+                    "all": false,
+                    "allowed": []
+                },
+                "extensions": {
+                    "all": true,
+                    "allowed": []
+                }
+            }
+        }
+    ]
+}

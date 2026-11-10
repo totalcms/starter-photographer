@@ -1,0 +1,52 @@
+{
+    "id": "sessions",
+    "title": "Sessions",
+    "route": "/sessions",
+    "template": "sessions",
+    "draft": false,
+    "nav": true,
+    "data": {
+        "intro": "Outdoors, unposed, at the end of the day. Three ways to spend an hour or two together."
+    },
+    "middleware": [],
+    "accessGroups": [],
+    "accessCollection": "",
+    "status": 200,
+    "redirectTo": "",
+    "sitemap": true,
+    "changeFrequency": "",
+    "priority": 0,
+    "updated": "2026-11-05T23:03:16-08:00",
+    "created": "2026-11-05T22:54:39-08:00",
+    "seo": {
+        "id": "seo",
+        "title": "Portrait Sessions and Fees",
+        "socialTitle": "",
+        "description": "Outdoor portrait sessions near the North Cascades, from a 45-minute walk to a half-day trip. See what's included.",
+        "socialDescription": "",
+        "image": {
+            "alt": "",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "",
+            "height": 0,
+            "link": "",
+            "mime": "",
+            "name": "",
+            "palette": [],
+            "size": 0,
+            "tags": [],
+            "uploadDate": "2026-11-05T23:03:16-08:00",
+            "width": 0
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    }
+}

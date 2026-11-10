@@ -1,0 +1,184 @@
+{
+    "id": "above-the-fog",
+    "title": "Above the Fog",
+    "genre": "Cities",
+    "location": "San Francisco and other towers",
+    "season": "Spring 2026",
+    "date": "2026-04-18T00:00:00-07:00",
+    "featured": true,
+    "draft": false,
+    "summary": "Cities at the hour when fog takes the streets away and leaves only the tops of things.",
+    "story": "<p>I treat cities the way I treat a valley. They have weather, habitats and a daily rhythm, and they're at their strangest before anyone is awake.</p><p>Fog is the great editor. It removes the traffic, the signs and the wires, and gives you back the shape of the place.</p>",
+    "gallery": [
+        {
+            "alt": "Sunrise over a city with towers rising out of a bank of fog",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "9ee19097",
+            "height": 1198,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "san-francisco-sunrise.jpg",
+            "palette": [
+                "#efd7ba",
+                "#d89b62",
+                "#654225",
+                "#a16d42",
+                "#af8768"
+            ],
+            "size": 205297,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:02-08:00",
+            "width": 1800,
+            "credit": {
+                "author": "Zetong Li",
+                "authorUrl": "https://www.pexels.com/@zetong-li-880728/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/18452802/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "Three dark towers standing above a sea of fog in pink and blue dawn light",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "9aa87ca6",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "towers-in-the-fog.jpg",
+            "palette": [
+                "#4f5060",
+                "#7b7279",
+                "#e0e0d1",
+                "#a4867f",
+                "#eaba8d"
+            ],
+            "size": 67201,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:02-08:00",
+            "width": 1200,
+            "credit": {
+                "author": "Aleksandar Pasaric",
+                "authorUrl": "https://www.pexels.com/@apasaric/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/6560707/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "A gold-lit tower breaking through thick cloud",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "6a696f29",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "gold-tower.jpg",
+            "palette": [
+                "#2e3b3b",
+                "#959a95",
+                "#515551",
+                "#97a7ac",
+                "#e4b478"
+            ],
+            "size": 112121,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:03-08:00",
+            "width": 1200,
+            "credit": {
+                "author": "Ricky Esquivel",
+                "authorUrl": "https://www.pexels.com/@rickyesquivel/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/2576111/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "Fog sitting on top of a dense downtown seen from high above",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "9b8f37c4",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "downtown-from-above.jpg",
+            "palette": [
+                "#171c1f",
+                "#bbb9b5",
+                "#868881",
+                "#676760",
+                "#4e5755"
+            ],
+            "size": 164929,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:03-08:00",
+            "width": 1200,
+            "credit": {
+                "author": "Yura Forrat",
+                "authorUrl": "https://www.pexels.com/@yuraforrat/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/15327232/",
+                "license": "Pexels License"
+            }
+        }
+    ],
+    "seo": {
+        "id": "seo",
+        "title": "",
+        "socialTitle": "",
+        "description": "",
+        "socialDescription": "",
+        "image": {
+            "alt": "",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "",
+            "height": 0,
+            "link": "",
+            "mime": "",
+            "name": "",
+            "palette": [],
+            "size": 0,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:02-08:00",
+            "width": 0
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    },
+    "updated": "2026-11-05T22:52:26-08:00",
+    "created": "2026-11-05T22:50:02-08:00",
+    "tint": 2
+}

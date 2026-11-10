@@ -1,0 +1,53 @@
+{
+    "id": "the-6-20-ferry",
+    "draft": false,
+    "featured": false,
+    "title": "The 6:20 Ferry",
+    "date": "2026-03-09T00:00:00-07:00",
+    "author": "Wren Alder",
+    "summary": "The cheapest wildlife tour in Washington costs less than a sandwich.",
+    "media": "",
+    "content": "<p>Twice a month I take the first boat across the Sound with a thermos and no plan. From the water, a city behaves like a coastline: it has a tide of commuters, a weather of its own and birds that know the timetable.</p><p>It's also a good way to stay sharp between jobs. You get one crossing, the light won't wait and there's no walking closer.</p>",
+    "extra": "",
+    "categories": [],
+    "tags": [
+        "Cities"
+    ],
+    "image": {
+        "alt": "A green and white ferry crossing the water in front of the Seattle skyline",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "55034000",
+        "height": 1201,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "ferry-and-the-needle.jpg",
+        "palette": [
+            "#7999a4",
+            "#d3d2cf",
+            "#1a333d",
+            "#2a5966",
+            "#aebabe"
+        ],
+        "size": 295446,
+        "tags": [],
+        "uploadDate": "2026-11-05T22:50:20-08:00",
+        "width": 1800,
+        "credit": {
+            "author": "Jared Lung",
+            "authorUrl": "https://www.pexels.com/@jared-lung-503187/",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/15091948/",
+            "license": "Pexels License"
+        }
+    },
+    "gallery": [],
+    "updated": "2026-11-05T22:50:21-08:00",
+    "created": "2026-11-05T22:50:20-08:00"
+}

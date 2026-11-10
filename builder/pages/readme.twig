@@ -1,0 +1,78 @@
+{#
+	A walkthrough for the person setting this site up: how the photographer
+	starter works and what to change for a real client. It is not in the nav, the
+	sitemap or search results. Delete the "readme" page in Site Builder (and this
+	file) before the site goes live.
+#}
+{% extends 'layouts/default.twig' %}
+
+{% block content %}
+	{% include 'partials/band.twig' with {title: 'How this site works', intro: 'A tour of the photographer starter: where each part is edited, and what to change before you hand it to a client.'} %}
+
+	<article class="sheet section readme stack" data-gap="2xl">
+		<div class="alert" data-variant="primary" role="note">
+			<p>Sign in at <a href="/admin">/admin</a> to follow along. Every change shows on the site as soon as you save; there is no publish step.</p>
+		</div>
+
+		<section class="stack" data-gap="md" aria-labelledby="tour-heading">
+			<h2 id="tour-heading">Where things are edited</h2>
+			<table class="table">
+				<thead>
+					<tr><th scope="col">On the site</th><th scope="col">In the admin</th></tr>
+				</thead>
+				<tbody>
+					<tr><td>Name, introduction, contact details, portrait, About story</td><td><strong>Studio Info</strong>. One form, and every page reads from it.</td></tr>
+					<tr><td>Work and the home page</td><td><strong>Projects</strong>. Each has a story, a location and a gallery. Turn on Show on Home Page for three of them.</td></tr>
+					<tr><td>Packages and fees</td><td><strong>Sessions</strong></td></tr>
+					<tr><td>Client quotes and common questions</td><td><strong>Testimonials</strong> and <strong>Questions</strong></td></tr>
+					<tr><td>Prints</td><td><strong>Prints</strong>. Sizes and prices are a table on each print.</td></tr>
+					<tr><td>Journal and its <a href="/feed/rss/journal">RSS feed</a></td><td><strong>Journal</strong></td></tr>
+					<tr><td>Messages from the Contact form</td><td><strong>Enquiries</strong></td></tr>
+					<tr><td>Private client pages</td><td><strong>Client Galleries</strong>, plus a page in <strong>Site Builder</strong></td></tr>
+					<tr><td>Pages, the nav, titles for search</td><td><strong>Site Builder</strong></td></tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section class="stack" data-gap="md" aria-labelledby="try-heading">
+			<h2 id="try-heading">Try it</h2>
+			<ol class="stack" data-gap="sm">
+				<li><strong>Reorder a gallery.</strong> Open Projects, then Two in the Pines. Drag a different photo to the front and save. On <a href="{{ cms.builder.url('project', {id: 'two-in-the-pines'}) }}">its page</a> the cover changes, and the page takes its color from the new photo.</li>
+				<li><strong>Add a project.</strong> Add a Project, give it a title and drag in three photos. It appears on <a href="{{ cms.builder.url('work') }}">Work</a> straight away, with its own page.</li>
+				<li><strong>Change a page's color.</strong> Each photo gives you five colors, shown as a bar under the gallery. Set Page Color on a project to a number from 1 to 5.</li>
+				<li><strong>Change a fee.</strong> Open Sessions, change a fee and refresh the <a href="{{ cms.builder.url('home') }}">home page</a>.</li>
+				<li><strong>Send yourself an enquiry.</strong> Fill in the <a href="{{ cms.builder.url('contact') }}">Contact form</a>, then open Enquiries in the admin.</li>
+				<li><strong>Visit a private gallery.</strong> Open <a href="/clients/mara-and-theo">Mara and Theo's page</a> in a private window and enter 8675. Signed-in admins skip the passcode. Large photos carry a watermark.</li>
+			</ol>
+		</section>
+
+		<section class="stack" data-gap="md" aria-labelledby="client-heading">
+			<h2 id="client-heading">Add a private gallery</h2>
+			<ol class="stack" data-gap="sm">
+				<li>In <strong>Client Galleries</strong>, add a gallery and drag in the client's photos.</li>
+				<li>In <strong>Site Builder</strong>, add a page. Use the <code>client-gallery</code> template and an address such as <code>/clients/their-name</code>. Leave Show in Nav off.</li>
+				<li>Turn on the <strong>protect</strong> feature, and set Page Data to <code>{"gallery": "their-gallery-id", "passcode": "4821"}</code>. Keep the quotes around the number.</li>
+				<li>Send the client the address and the passcode.</li>
+			</ol>
+		</section>
+
+		<section class="stack" data-gap="md" aria-labelledby="handover-heading">
+			<h2 id="handover-heading">Before you hand it over</h2>
+			<ul class="stack" data-gap="sm">
+				<li>Replace everything in <strong>Studio Info</strong>, then replace the demo projects, sessions, quotes and prints.</li>
+				<li>Upload the client's own photos. The demo photos are stock images, licensed only for this demo and not for sale as prints; see <code>CREDITS.md</code>.</li>
+				<li>Set up email under Settings so Enquiries reach the client's inbox. Until then they are still saved in the admin.</li>
+				<li>Set the accent color and fonts at the top of <code>css/theme.css</code>, then run <code>npm run build</code>.</li>
+				<li>Replace the mark in <code>builder/partials/logo.twig</code>.</li>
+				<li>Change the wording of the watermark in the <strong>print</strong> and <strong>client-gallery</strong> schemas.</li>
+				<li>Delete this page: remove "readme" in Site Builder and <code>builder/pages/readme.twig</code>.</li>
+			</ul>
+		</section>
+
+		<section class="stack" data-gap="md" aria-labelledby="code-heading">
+			<h2 id="code-heading">Under the hood</h2>
+			<p>The templates are in <code>builder/</code> and are plain Twig, with a comment at the top of each file explaining what it does. Layout comes from <a href="https://foundationcss.com/yeti/">Yeti</a>. The site's own look is one file, <code>css/theme.css</code>.</p>
+			<p>The moving band color has three small parts: Twig writes a photo's palette color into the page, <code>css/theme.css</code> turns it into a dark band color, and <code>js/app.js</code> changes it as you scroll.</p>
+		</section>
+	</article>
+{% endblock %}

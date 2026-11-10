@@ -1,0 +1,150 @@
+{
+    "id": "after-the-rain",
+    "title": "After the Rain",
+    "genre": "Cities",
+    "location": "City streets, after dark",
+    "season": "Autumn 2025",
+    "date": "2025-09-20T00:00:00-07:00",
+    "featured": false,
+    "draft": false,
+    "summary": "Wet pavement turns a plain street into a second city, lit from below.",
+    "story": "<p>The hour after a downpour is my favorite in any city. Everyone has gone inside, the pavement has turned to mirror, and every sign is printed twice.</p>",
+    "gallery": [
+        {
+            "alt": "Window light reflected in wet pavement in front of a dark building",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "5671f68d",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "empty-corner.jpg",
+            "palette": [
+                "#d0d0d1",
+                "#624230",
+                "#d58324",
+                "#7b8c9f",
+                "#984912"
+            ],
+            "size": 482410,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:07-08:00",
+            "width": 1440,
+            "credit": {
+                "author": "Juan Pablo Daniel",
+                "authorUrl": "https://www.pexels.com/@who0ne/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/35131834/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "Two people walking down a wet city street at night under orange lights",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "dcebe353",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "rain-on-the-avenue.jpg",
+            "palette": [
+                "#cb7340",
+                "#794337",
+                "#ecdead",
+                "#15191f",
+                "#4e302d"
+            ],
+            "size": 488630,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:07-08:00",
+            "width": 1350,
+            "credit": {
+                "author": "Allen Boguslavsky",
+                "authorUrl": "https://www.pexels.com/@allen-boguslavsky-1344061/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/30315845/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "Red traffic lights reflected along a wet street at night",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "644b0392",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "red-light-street.jpg",
+            "palette": [
+                "#c66859",
+                "#70423e",
+                "#0c1723",
+                "#463233",
+                "#eccbbb"
+            ],
+            "size": 373814,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:08-08:00",
+            "width": 1440,
+            "credit": {
+                "author": "Yura Forrat",
+                "authorUrl": "https://www.pexels.com/@yuraforrat/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/11866539/",
+                "license": "Pexels License"
+            }
+        }
+    ],
+    "seo": {
+        "id": "seo",
+        "title": "",
+        "socialTitle": "",
+        "description": "",
+        "socialDescription": "",
+        "image": {
+            "alt": "",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "",
+            "height": 0,
+            "link": "",
+            "mime": "",
+            "name": "",
+            "palette": [],
+            "size": 0,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:07-08:00",
+            "width": 0
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    },
+    "updated": "2026-11-05T22:52:27-08:00",
+    "created": "2026-11-05T22:50:07-08:00",
+    "tint": 3
+}

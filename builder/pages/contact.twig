@@ -1,0 +1,54 @@
+{#
+	Contact: the booking form. It's a real Total CMS form, so each message is
+	saved in the Enquiries collection and shows in the admin. If email is set up,
+	it's sent to you as well.
+
+	Three settings make a form safe to put on a public page:
+	  addOnly        visitors can only create, never edit, an enquiry
+	  botProtection  a honeypot and a time trap that turn away simple spam bots
+	  publicOperations  set to "create" on the Enquiries collection in its settings
+
+	newActions says what happens after sending: first the "new-enquiry" email (the
+	template is in the Mailer collection), then the thank-you message. "continue"
+	means a mail problem doesn't lose the visitor's message.
+
+	The Sessions and Prints pages link here with ?interest=Golden%20Hour. Anything
+	after the ? arrives as getData, and "default" puts it in the field.
+#}
+{% extends 'layouts/default.twig' %}
+
+{% block content %}
+	{% include 'partials/band.twig' with {title: page.title, intro: page.data.intro|default('')} %}
+
+	<section class="sheet section grid" data-tracks="12" data-threshold="md" data-gap="lg">
+		<div class="stack" data-span="4" data-gap="sm">
+			<h2>Write to me</h2>
+			<p>{{ info.responseTime }}</p>
+			<p><a href="mailto:{{ info.email }}">{{ info.email }}</a></p>
+			{% if info.phone %}<p>{{ info.phone }}</p>{% endif %}
+			<p class="muted">{{ info.base }}</p>
+		</div>
+
+		<div data-span="7" data-start="6">
+			{% set form = cms.form.builder('enquiries', {
+				addOnly: true,
+				botProtection: true,
+				save: 'Send',
+				fieldIcons: false,
+				newActions: [
+					{action: 'mailer', mailerId: 'new-enquiry', continue: true},
+					{action: 'message', text: 'Thank you. Your note is on its way, and I will write back soon.'}
+				]
+			}) %}
+			{% do form.addField('name') %}
+			{% do form.addField('email') %}
+			{% do form.addField('phone') %}
+			{% do form.addField('topic', {default: getData.topic|default('') == 'print' ? 'A print' : 'A portrait session'}) %}
+			{% do form.addField('interest', {default: getData.interest|default('')}) %}
+			{% do form.addField('preferredDate') %}
+			{% do form.addField('place') %}
+			{% do form.addField('message', {field: 'textarea'}) %}
+			{{ form.build() }}
+		</div>
+	</section>
+{% endblock %}

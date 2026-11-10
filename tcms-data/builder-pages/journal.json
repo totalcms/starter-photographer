@@ -1,0 +1,52 @@
+{
+    "id": "journal",
+    "title": "Journal",
+    "route": "/journal",
+    "template": "journal",
+    "draft": false,
+    "nav": true,
+    "data": {
+        "intro": "Field notes, advice for clients, and the occasional bear."
+    },
+    "middleware": [],
+    "accessGroups": [],
+    "accessCollection": "",
+    "status": 200,
+    "redirectTo": "",
+    "sitemap": true,
+    "changeFrequency": "",
+    "priority": 0,
+    "updated": "2026-11-05T23:03:17-08:00",
+    "created": "2026-11-05T22:54:39-08:00",
+    "seo": {
+        "id": "seo",
+        "title": "Journal",
+        "socialTitle": "",
+        "description": "Field notes and advice for clients from a nature photographer in the North Cascades.",
+        "socialDescription": "",
+        "image": {
+            "alt": "",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "",
+            "height": 0,
+            "link": "",
+            "mime": "",
+            "name": "",
+            "palette": [],
+            "size": 0,
+            "tags": [],
+            "uploadDate": "2026-11-05T23:03:17-08:00",
+            "width": 0
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    }
+}

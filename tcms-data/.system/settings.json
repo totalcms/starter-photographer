@@ -1,0 +1,20 @@
+{
+    "i18n": {
+        "default": "en_US"
+    },
+    "siteName": "Wren Alder",
+    "sentry": false,
+    "smtp": {
+        "host": "",
+        "port": "25",
+        "secure": "tls",
+        "username": "",
+        "password": "",
+        "from": "",
+        "fromName": "",
+        "to": "",
+        "sendDelay": 0,
+        "maxPerHour": 0,
+        "maxPerDay": 0
+    }
+}

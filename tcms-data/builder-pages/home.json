@@ -1,0 +1,54 @@
+{
+    "id": "home",
+    "title": "Home",
+    "route": "/",
+    "template": "index",
+    "draft": false,
+    "nav": false,
+    "data": {
+        "sessionsHeading": "Portrait sessions",
+        "sessionsIntro": "Outdoors, unposed, and at the hour when the light is kind.",
+        "journalHeading": "From the Journal"
+    },
+    "middleware": [],
+    "accessGroups": [],
+    "accessCollection": "",
+    "status": 200,
+    "redirectTo": "",
+    "sitemap": true,
+    "changeFrequency": "",
+    "priority": 0,
+    "updated": "2026-11-05T23:13:34-08:00",
+    "created": "2026-11-05T22:54:38-08:00",
+    "seo": {
+        "id": "seo",
+        "title": "Nature and Outdoor Portrait Photographer",
+        "socialTitle": "",
+        "description": "Wildlife, landscapes, cities and outdoor portraits from the North Cascades, Washington. See the work and book a session.",
+        "socialDescription": "",
+        "image": {
+            "alt": "",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "",
+            "height": 0,
+            "link": "",
+            "mime": "",
+            "name": "",
+            "palette": [],
+            "size": 0,
+            "tags": [],
+            "uploadDate": "2026-11-05T23:03:16-08:00",
+            "width": 0
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    }
+}

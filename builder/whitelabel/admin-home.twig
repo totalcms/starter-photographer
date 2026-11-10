@@ -1,0 +1,30 @@
+{#
+	The dashboard home. Admins get the standard home. Everyone else gets a short
+	page for running the site: new enquiries first, then the jobs that come up
+	most often. Replacing the admin home needs the Pro edition.
+#}
+{% if cms.auth.isAdmin() %}
+	{{ include('admin-home-default.twig') }}
+{% else %}
+	{# Enquiries still marked New, with the newest first. #}
+	{% set enquiries = cms.collection.objects('enquiries')|filterCollection([
+		{property: 'status', operator: 'equal', value: 'New'}
+	])|sortCollection([{property: 'created', reverse: true}]) %}
+
+	<div class="dashboard-section">
+		<h2>New enquiries</h2>
+		{% for enquiry in enquiries %}
+			<p><a href="collections/enquiries/{{ enquiry.id|url_encode }}">{{ enquiry.name }}</a>: {{ enquiry.topic }}</p>
+		{% else %}
+			<p>Nothing new. Messages from the Contact page appear here.</p>
+		{% endfor %}
+	</div>
+
+	<div class="dashboard-section">
+		<h2>Quick jobs</h2>
+		<p><a href="collections/projects/add">Add a project</a></p>
+		<p><a href="collections/journal/add">Write a Journal entry</a></p>
+		<p><a href="collections/client-galleries/add">Add a client gallery</a></p>
+		<p><a href="collections/info/info">Update your details</a></p>
+	</div>
+{% endif %}

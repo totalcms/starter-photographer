@@ -1,0 +1,48 @@
+{
+	"name": "totalcms/starter-photographer",
+	"description": "Wren Alder: a photographer's site for Total CMS, with projects, session packages, print requests, a booking form, private client galleries and a Journal.",
+	"homepage": "https://totalcms.co",
+	"support": {
+		"docs": "https://docs.totalcms.co",
+		"email": "support@totalcms.co"
+	},
+	"authors": [
+		{
+			"name": "Joe Workman",
+			"homepage": "https://totalcms.co"
+		}
+	],
+	"keywords": [
+		"cms",
+		"flat-file",
+		"flat-file-cms",
+		"no-database",
+		"headless-cms",
+		"content-management",
+		"php-cms",
+		"twig",
+		"slim",
+		"json",
+		"total-cms",
+		"totalcms",
+		"totalcms-starter"
+	],
+	"type": "project",
+	"license": "proprietary",
+	"prefer-stable": true,
+	"require": {
+		"php": ">=8.2",
+		"totalcms/cms": "^3.6.8"
+	},
+	"config": {
+		"allow-plugins": {
+			"totalcms/cms": true,
+			"php-http/discovery": true
+		}
+	},
+	"scripts": {
+		"post-create-project-cmd": [
+			"@php bin/post-install.php"
+		]
+	}
+}

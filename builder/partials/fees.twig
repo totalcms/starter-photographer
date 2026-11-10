@@ -1,0 +1,18 @@
+{#
+	The fee table, used on the home page. Lists each session with
+	"Show on Home Page" turned on, in the order set in the admin.
+	Fees are whole dollars, so number_format adds the comma and no cents.
+#}
+{% set fees = cms.collection.objects('sessions')|filterCollection([
+	{property: 'featured', operator: 'equal', value: true}
+])|sortCollection([{property: 'order'}]) %}
+<table class="table">
+	<thead>
+		<tr><th scope="col">Session</th><th scope="col">Time on location</th><th scope="col" data-numeric>Fee</th></tr>
+	</thead>
+	<tbody>
+		{% for session in fees %}
+			<tr><th scope="row">{{ session.name }}</th><td>{{ session.length }}</td><td data-numeric>${{ session.price|number_format }}</td></tr>
+		{% endfor %}
+	</tbody>
+</table>

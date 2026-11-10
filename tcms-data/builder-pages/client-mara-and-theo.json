@@ -1,0 +1,56 @@
+{
+    "id": "client-mara-and-theo",
+    "title": "Private Gallery",
+    "route": "/clients/mara-and-theo",
+    "template": "client-gallery",
+    "draft": false,
+    "nav": false,
+    "data": {
+        "gallery": "mara-and-theo",
+        "passcode": "8675",
+        "promptTitle": "Mara and Theo's gallery"
+    },
+    "middleware": [
+        "protect"
+    ],
+    "accessGroups": [],
+    "accessCollection": "",
+    "status": 200,
+    "redirectTo": "",
+    "sitemap": false,
+    "changeFrequency": "",
+    "priority": 0,
+    "updated": "2026-11-05T22:55:48-08:00",
+    "created": "2026-11-05T22:54:40-08:00",
+    "seo": {
+        "id": "seo",
+        "title": "",
+        "socialTitle": "",
+        "description": "",
+        "socialDescription": "",
+        "image": {
+            "alt": "",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "",
+            "height": 0,
+            "link": "",
+            "mime": "",
+            "name": "",
+            "palette": [],
+            "size": 0,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:54:40-08:00",
+            "width": 0
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    }
+}

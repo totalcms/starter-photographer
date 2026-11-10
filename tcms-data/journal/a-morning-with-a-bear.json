@@ -1,0 +1,53 @@
+{
+    "id": "a-morning-with-a-bear",
+    "draft": false,
+    "featured": false,
+    "title": "A Morning With a Bear",
+    "date": "2026-09-02T00:00:00-07:00",
+    "author": "Wren Alder",
+    "summary": "Six hours in a blind, four minutes of bear, and why that's a fair trade.",
+    "media": "",
+    "content": "<p>The salmon were running late this year, and so was the bear. I'd been in the blind since before dawn when she finally waded out into the shade, looked at the water for a long while, and sat down in it.</p><p>She stayed four minutes. I took eleven frames and kept one. Keeping your distance means working with a long lens and a lot of cropped-out river, but she never knew I was there, and that's the whole point.</p>",
+    "extra": "",
+    "categories": [],
+    "tags": [
+        "Wildlife"
+    ],
+    "image": {
+        "alt": "A brown bear standing chest deep in a shaded river",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "482cd0f3",
+        "height": 1200,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "bear-in-the-shallows.jpg",
+        "palette": [
+            "#b6a89d",
+            "#7c7262",
+            "#161818",
+            "#565243",
+            "#3a3a2c"
+        ],
+        "size": 254014,
+        "tags": [],
+        "uploadDate": "2026-11-05T22:50:19-08:00",
+        "width": 1800,
+        "credit": {
+            "author": "Oliver Morgan Media",
+            "authorUrl": "https://www.pexels.com/@oliver-morgan-media-400577173/",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/18453574/",
+            "license": "Pexels License"
+        }
+    },
+    "gallery": [],
+    "updated": "2026-11-05T22:50:20-08:00",
+    "created": "2026-11-05T22:50:19-08:00"
+}

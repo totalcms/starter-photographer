@@ -1,0 +1,184 @@
+{
+    "id": "wet-side-of-the-range",
+    "title": "Wet Side of the Range",
+    "genre": "Landscapes",
+    "location": "Western slopes to the Pacific",
+    "season": "Autumn 2025",
+    "date": "2025-10-25T00:00:00-07:00",
+    "featured": false,
+    "draft": false,
+    "summary": "Moss, waterfalls and old roads on the side of the mountains that catches all the rain.",
+    "story": "<p>Everything on the west side grows on top of something else. Walk any old road for an hour and you'll cross a waterfall, a landslide and a thousand kinds of green.</p><p>This set follows the water down from the high country to where it finally meets the Pacific.</p>",
+    "gallery": [
+        {
+            "alt": "Yellow and red autumn shrubs around a still pool below misty forested slopes",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "ec9af962",
+            "height": 1200,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "autumn-tarn.jpg",
+            "palette": [
+                "#c7c3c1",
+                "#977942",
+                "#b2afad",
+                "#a5958a",
+                "#694917"
+            ],
+            "size": 352700,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:05-08:00",
+            "width": 1800,
+            "credit": {
+                "author": "Frank Cone",
+                "authorUrl": "https://www.pexels.com/@frank-cone-140140/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/9934436/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "A tall waterfall seen through dark firs and ferns",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "aedc828e",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "falls-through-the-firs.jpg",
+            "palette": [
+                "#bdbec3",
+                "#5a7665",
+                "#072223",
+                "#315767",
+                "#78a05b"
+            ],
+            "size": 373497,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:05-08:00",
+            "width": 1200,
+            "credit": {
+                "author": "Sandra Seitamaa",
+                "authorUrl": "https://www.pexels.com/@sandra-seitamaa-89384773/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/9701747/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "An old dirt road running into tall dark trees in fog",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "aea2848f",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "logging-road-in-fog.jpg",
+            "palette": [
+                "#b3b3b9",
+                "#666565",
+                "#11100c",
+                "#3a362f",
+                "#8b8c8f"
+            ],
+            "size": 266080,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:06-08:00",
+            "width": 1200,
+            "credit": {
+                "author": "Elina Volkova",
+                "authorUrl": "https://www.pexels.com/@miami302/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/29579812/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "A rocky Pacific headland and sea stacks at sunset, framed by wind-bent trees",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "3448e8b4",
+            "height": 1111,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "headland-at-sunset.jpg",
+            "palette": [
+                "#e5d4c5",
+                "#acaeb1",
+                "#9b7f6b",
+                "#9099a1",
+                "#1f1f1e"
+            ],
+            "size": 242057,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:06-08:00",
+            "width": 1800,
+            "credit": {
+                "author": "Matthew DeVries",
+                "authorUrl": "https://www.pexels.com/@mattdvphotography/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/2606395/",
+                "license": "Pexels License"
+            }
+        }
+    ],
+    "seo": {
+        "id": "seo",
+        "title": "",
+        "socialTitle": "",
+        "description": "",
+        "socialDescription": "",
+        "image": {
+            "alt": "",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "",
+            "height": 0,
+            "link": "",
+            "mime": "",
+            "name": "",
+            "palette": [],
+            "size": 0,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:05-08:00",
+            "width": 0
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    },
+    "updated": "2026-11-05T22:52:27-08:00",
+    "created": "2026-11-05T22:50:05-08:00",
+    "tint": 2
+}

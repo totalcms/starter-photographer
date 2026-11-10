@@ -1,0 +1,72 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/question.json",
+    "type": "object",
+    "id": "question",
+    "description": "One common question on the Sessions page.",
+    "properties": {
+        "id": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json",
+            "label": "ID",
+            "help": "Made from the question. No need to change it.",
+            "field": "id",
+            "settings": {
+                "autogen": "${question}"
+            }
+        },
+        "question": {
+            "type": "string",
+            "label": "Question",
+            "help": "Written the way a client would ask it.",
+            "field": "text"
+        },
+        "answer": {
+            "type": "string",
+            "label": "Answer",
+            "help": "A short, plain answer. Two or three sentences.",
+            "field": "textarea"
+        },
+        "order": {
+            "type": "number",
+            "label": "Order",
+            "help": "Lower numbers come first.",
+            "field": "number",
+            "default": 0
+        },
+        "updated": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Updated",
+            "help": "Set automatically when the object is saved.",
+            "field": "datetime",
+            "settings": {
+                "onUpdate": true,
+                "readonly": true
+            }
+        },
+        "created": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Created",
+            "help": "Set automatically when the object is created.",
+            "field": "datetime",
+            "settings": {
+                "onCreate": true,
+                "readonly": true
+            }
+        }
+    },
+    "required": [
+        "id",
+        "question"
+    ],
+    "index": [
+        "id",
+        "question",
+        "order",
+        "answer",
+        "updated",
+        "created"
+    ],
+    "formgrid": "question id\nanswer answer\norder order\nupdated created",
+    "updated": "2026-11-05T22:59:12-08:00",
+    "category": "Photographer"
+}

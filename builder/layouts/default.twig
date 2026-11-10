@@ -1,0 +1,51 @@
+{#
+	The layout every page extends. It holds what is the same on every page:
+	the <head>, the nav and the footer. Each page fills in {% block content %}.
+
+	Three names you will see everywhere:
+	  page  the Site Builder page being shown (title, route, data...)
+	  info  the photographer's details, edited in the admin under Studio Info
+	  --photo  a CSS color that tints the band at the top of the page.
+	           A page can set it with {% block photo %}, usually to a color
+	           taken from its own photograph. See css/theme.css.
+#}
+{% set info = cms.collection.object('info', 'info') %}
+{% import 'macros/photo.twig' as photo %}
+<!DOCTYPE html>
+<html lang="en" style="--photo: {% block photo %}{{ photo.color() }}{% endblock %}">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	{# Title, description, social cards and structured data, built from the page's SEO settings. Don't add a <title> by hand. #}
+	{% block seo %}{{ cms.seo.head(page) }}{% endblock %}
+
+	{# Total CMS's own CSS for the parts it renders, such as the photo gallery and the contact form. #}
+	{{ cms.assetsHead() }}
+
+	{# Yeti, the CSS framework, then this site's theme, built from css/. #}
+	{{ cms.builder.css('css/style.css') }}
+
+	{# The small script that changes the band color as you scroll. The site works without it. #}
+	{{ cms.builder.js('js/app.js', {module: true}) }}
+
+	{% block head %}{% endblock %}
+</head>
+
+{# "shell" is Yeti's page skeleton: nav on top, footer pinned to the bottom of short pages. #}
+<body class="shell" data-gap="none">
+	{# Lets keyboard and screen-reader users jump past the nav. #}
+	<a href="#content">Skip to content</a>
+
+	{% include 'partials/nav.twig' %}
+
+	<main id="content">
+		{% block content %}{% endblock %}
+	</main>
+
+	{% include 'partials/footer.twig' %}
+
+	{# Total CMS's own JavaScript, such as the gallery lightbox. Keep it just before </body>. #}
+	{{ cms.assetsBody() }}
+</body>
+</html>

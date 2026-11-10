@@ -1,0 +1,54 @@
+[
+    {
+        "id": "home",
+        "children": []
+    },
+    {
+        "id": "work",
+        "children": []
+    },
+    {
+        "id": "sessions",
+        "children": []
+    },
+    {
+        "id": "prints",
+        "children": []
+    },
+    {
+        "id": "journal",
+        "children": []
+    },
+    {
+        "id": "about",
+        "children": []
+    },
+    {
+        "id": "contact",
+        "children": []
+    },
+    {
+        "id": "project",
+        "children": []
+    },
+    {
+        "id": "journal-post",
+        "children": []
+    },
+    {
+        "id": "client-mara-and-theo",
+        "children": []
+    },
+    {
+        "id": "readme",
+        "children": []
+    },
+    {
+        "id": "not-found",
+        "children": []
+    },
+    {
+        "id": "robots",
+        "children": []
+    }
+]

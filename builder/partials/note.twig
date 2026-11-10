@@ -1,0 +1,9 @@
+{#
+	One Journal entry as a short note: date, title and summary, with no photo.
+	Expects: post (one object from the journal collection)
+#}
+<article class="stack" data-gap="xs">
+	<h3><a href="{{ cms.builder.url('journal-post', {id: post.id}) }}">{{ post.title }}</a></h3>
+	<p>{{ post.summary|striptags }}</p>
+	<p class="muted"><time datetime="{{ post.date|date('Y-m-d', false) }}">{{ post.date|date('F j, Y', false) }}</time></p>
+</article>

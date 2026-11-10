@@ -1,0 +1,56 @@
+{
+    "id": "towers-in-the-fog",
+    "title": "Towers in the Fog",
+    "location": "Above the marine layer",
+    "order": 2,
+    "note": "Archival pigment on cotton rag. Signed on the back.",
+    "image": {
+        "alt": "Three dark towers standing above a sea of fog in pink and blue dawn light",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "9aa87ca6",
+        "height": 1800,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "towers-in-the-fog.jpg",
+        "palette": [
+            "#4f5060",
+            "#7b7279",
+            "#e0e0d1",
+            "#a4867f",
+            "#eaba8d"
+        ],
+        "size": 67201,
+        "tags": [],
+        "uploadDate": "2026-11-05T22:50:17-08:00",
+        "width": 1200,
+        "credit": {
+            "author": "Aleksandar Pasaric",
+            "authorUrl": "https://www.pexels.com/@apasaric/",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/6560707/",
+            "license": "Pexels License"
+        }
+    },
+    "sizes": {
+        "size_1": {
+            "id": "size_1",
+            "size": "12 \u00d7 18 in.",
+            "price": 140
+        },
+        "size_2": {
+            "id": "size_2",
+            "size": "20 \u00d7 30 in.",
+            "price": 320
+        }
+    },
+    "available": true,
+    "updated": "2026-11-05T22:50:17-08:00",
+    "created": "2026-11-05T22:50:16-08:00"
+}

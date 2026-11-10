@@ -1,0 +1,52 @@
+{
+    "id": "far-afield",
+    "name": "Far Afield",
+    "price": 1450,
+    "length": "Half a day",
+    "bestFor": "Engagements, anniversaries and big occasions",
+    "summary": "Somewhere you have to walk to. We plan the route together, pack a thermos and go.",
+    "includes": [
+        "90 edited photos",
+        "Route planning and permits",
+        "Private online gallery",
+        "A linen-bound book of 20 photos"
+    ],
+    "image": {
+        "alt": "A couple standing small among the trunks of a tall dark pine forest",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "3447915b",
+        "height": 1200,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "pines-wide.jpg",
+        "palette": [
+            "#bab4a3",
+            "#827962",
+            "#16120b",
+            "#696650",
+            "#5c523c"
+        ],
+        "size": 554809,
+        "tags": [],
+        "uploadDate": "2026-11-05T22:50:14-08:00",
+        "width": 1800,
+        "credit": {
+            "author": "Pavel Danilyuk",
+            "authorUrl": "https://www.pexels.com/@pavel-danilyuk/",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/6966762/",
+            "license": "Pexels License"
+        }
+    },
+    "order": 3,
+    "featured": true,
+    "updated": "2026-11-05T22:50:14-08:00",
+    "created": "2026-11-05T22:50:13-08:00"
+}

@@ -1,0 +1,130 @@
+{#
+	Home page. Read top to bottom it goes: who this is, one big photograph, the
+	four bodies of work, two more projects, session fees, a client's words and
+	the latest Journal entries.
+
+	Almost nothing is typed in here. The photos and details come from the
+	collections, and the headings come from this page's Page Data in Site Builder.
+#}
+{% extends 'layouts/default.twig' %}
+{% import 'macros/photo.twig' as photo %}
+
+{#
+	Every project with "Show on Home Page" turned on, newest first.
+	The first is the big photo at the top; the others follow further down.
+#}
+{% set featured = cms.collection.query('projects', {
+	filter: [
+		{property: 'draft', operator: 'isfalse'},
+		{property: 'featured', operator: 'istrue'}
+	],
+	sort: 'date:desc',
+	limit: 3
+}).objects %}
+{% set lead = featured|first %}
+
+{# Each photo has five colors. "Page Color" on the project picks which one. #}
+{% set leadColor = photo.color(lead.gallery|first, lead.tint) %}
+
+{% block photo %}{{ leadColor }}{% endblock %}
+
+{% block content %}
+	{# ---- Title band ---------------------------------------------------- #}
+	{% include 'partials/band.twig' with {title: info.name, intro: info.tagline} %}
+
+	{# ---- The lead photograph ------------------------------------------ #}
+	{% if lead %}
+		<figure class="lead" data-photo="{{ leadColor }}">
+			{{ cms.render.galleryImage(lead.id, 'first', {w: 1800, h: 1000, fit: 'crop'}, {collection: 'projects', loading: 'eager'}) }}
+			<figcaption class="strip sheet">
+				<span>{{ lead.title }}, {{ lead.location }}</span>
+				<a href="{{ cms.builder.url('project', {id: lead.id}) }}">See the project</a>
+			</figcaption>
+		</figure>
+	{% endif %}
+
+	{#
+		---- The four bodies of work ---------------------------------------
+		The names come from the Body of Work options in the project schema, so
+		renaming one there renames it here. For each one we ask for the newest
+		project and show the last photo in its gallery, so a panel doesn't repeat
+		a cover used elsewhere on this page.
+	#}
+	<section class="sheet panels-row" aria-labelledby="work-heading">
+		<h2 id="work-heading" class="visually-hidden">Bodies of work</h2>
+		<div class="panels grid" data-columns="4" data-min="3xs" data-gap="lg">
+			{% for genre in cms.schema.get('project').properties.genre.options %}
+				{% set newest = cms.collection.query('projects', {
+					filter: [{property: 'genre', value: genre}, {property: 'draft', operator: 'isfalse'}],
+					sort: 'date:desc',
+					limit: 1
+				}).objects|first %}
+				{% if newest %}
+					<article class="panel" data-photo="{{ photo.color(newest.gallery|last, newest.tint) }}">
+						<a href="{{ cms.builder.url('work') }}?genre={{ genre|url_encode }}">
+							{{ cms.render.galleryImage(newest.id, 'last', {w: 800, h: 1000, fit: 'crop'}, {collection: 'projects'}) }}
+							<h3>{{ genre }}</h3>
+						</a>
+					</article>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</section>
+
+	{#
+		---- Two more projects ----------------------------------------------
+		The same two columns every time. data-photo hands this project's color to
+		the band as it scrolls past the middle of the screen.
+	#}
+	{% for project in featured|slice(1) %}
+		<section class="sheet section grid" data-tracks="12" data-threshold="md" data-gap="lg" data-align="end" data-photo="{{ photo.color(project.gallery|first, project.tint) }}">
+			<a href="{{ cms.builder.url('project', {id: project.id}) }}" data-span="8">
+				{{ cms.render.galleryImage(project.id, 'first', {w: 1400, h: 934, fit: 'crop'}, {collection: 'projects'}) }}
+			</a>
+			<div class="stack" data-span="4" data-gap="sm">
+				<h2>{{ project.title }}</h2>
+				<p class="muted">{{ project.location }}</p>
+				<p>{{ project.summary }}</p>
+				<p><a href="{{ cms.builder.url('project', {id: project.id}) }}">See the project</a></p>
+			</div>
+		</section>
+	{% endfor %}
+
+	{# ---- Session fees -------------------------------------------------- #}
+	<section class="sheet section grid fold" data-tracks="12" data-threshold="md" data-gap="lg" aria-labelledby="sessions-heading">
+		<div class="stack" data-span="4" data-gap="md">
+			<h2 id="sessions-heading">{{ page.data.sessionsHeading }}</h2>
+			<p>{{ page.data.sessionsIntro }}</p>
+			<p><a class="button" href="{{ cms.builder.url('sessions') }}">See what's included</a></p>
+		</div>
+		<div data-span="8">{% include 'partials/fees.twig' %}</div>
+	</section>
+
+	{# ---- A client's words: the first testimonial marked for the home page ---- #}
+	{% set quote = cms.collection.objects('testimonials')|filterCollection([
+		{property: 'featured', operator: 'equal', value: true}
+	])|first %}
+	{% if quote %}
+		<section class="band" aria-label="What clients say">
+			<figure class="sheet grid" data-tracks="12" data-threshold="md" data-gap="lg">
+				<blockquote data-span="8">{{ quote.quote }}</blockquote>
+				<figcaption data-span="3" data-start="10">{{ quote.name }}<br>{{ quote.context }}</figcaption>
+			</figure>
+		</section>
+	{% endif %}
+
+	{# ---- Latest from the Journal --------------------------------------- #}
+	{% set posts = cms.collection.query('journal', {
+		filter: [{property: 'draft', operator: 'isfalse'}],
+		sort: 'date:desc',
+		limit: 3
+	}).objects %}
+	<section class="sheet section" aria-labelledby="journal-heading">
+		<div class="stack" data-gap="lg">
+			<h2 id="journal-heading">{{ page.data.journalHeading }}</h2>
+			<div class="grid notes" data-columns="3" data-min="xs" data-gap="lg">
+				{% for post in posts %}{% include 'partials/note.twig' %}{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endblock %}

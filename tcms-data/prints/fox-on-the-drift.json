@@ -1,0 +1,56 @@
+{
+    "id": "fox-on-the-drift",
+    "title": "Fox on the Drift",
+    "location": "Northern woodland",
+    "order": 3,
+    "note": "Archival pigment on cotton rag. Edition of 50.",
+    "image": {
+        "alt": "A red fox standing on a snowdrift at the edge of bare woods",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "251d1139",
+        "height": 1296,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "fox-on-the-drift.jpg",
+        "palette": [
+            "#625a54",
+            "#d8e0ec",
+            "#bd8c5f",
+            "#9a948e",
+            "#b0afb2"
+        ],
+        "size": 119709,
+        "tags": [],
+        "uploadDate": "2026-11-05T22:50:17-08:00",
+        "width": 1800,
+        "credit": {
+            "author": "Anne-Marie Gionet-Lavoie",
+            "authorUrl": "https://www.pexels.com/@anne-marie-gionet-lavoie-811028326/",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/20043202/",
+            "license": "Pexels License"
+        }
+    },
+    "sizes": {
+        "size_1": {
+            "id": "size_1",
+            "size": "12 \u00d7 18 in.",
+            "price": 160
+        },
+        "size_2": {
+            "id": "size_2",
+            "size": "16 \u00d7 24 in.",
+            "price": 260
+        }
+    },
+    "available": true,
+    "updated": "2026-11-05T22:50:18-08:00",
+    "created": "2026-11-05T22:50:17-08:00"
+}

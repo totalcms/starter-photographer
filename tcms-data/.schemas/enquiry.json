@@ -1,0 +1,124 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/enquiry.json",
+    "type": "object",
+    "id": "enquiry",
+    "description": "A message sent from the Contact page. Visitors can only create these; they can't read them. Status is for your own tracking.",
+    "properties": {
+        "id": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json",
+            "label": "ID",
+            "help": "Set automatically.",
+            "field": "id",
+            "settings": {
+                "autogen": "${name}-${timestamp}"
+            }
+        },
+        "name": {
+            "type": "string",
+            "label": "Your Name",
+            "help": "The name of the person writing in.",
+            "field": "text"
+        },
+        "email": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/email.json",
+            "label": "Email",
+            "help": "Where to send the reply.",
+            "field": "email"
+        },
+        "phone": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/phone.json",
+            "label": "Phone",
+            "help": "Optional.",
+            "field": "phone"
+        },
+        "topic": {
+            "type": "string",
+            "label": "What Can I Help With?",
+            "help": "The reason for writing.",
+            "field": "select",
+            "options": [
+                "A portrait session",
+                "A print",
+                "Something else"
+            ],
+            "default": "A portrait session"
+        },
+        "interest": {
+            "type": "string",
+            "label": "Session or Print",
+            "help": "Which session or print this is about. Filled in for you when you start from those pages.",
+            "field": "text"
+        },
+        "preferredDate": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Preferred Date",
+            "help": "Roughly when, if you know.",
+            "field": "date"
+        },
+        "place": {
+            "type": "string",
+            "label": "Place in Mind",
+            "help": "A beach, a trail, a backyard. It's fine not to know yet.",
+            "field": "text"
+        },
+        "message": {
+            "type": "string",
+            "label": "Message",
+            "help": "Tell me a little about who's coming and what you have in mind.",
+            "field": "textarea"
+        },
+        "status": {
+            "type": "string",
+            "label": "Status",
+            "help": "Your own tracking. Visitors never see this.",
+            "field": "select",
+            "options": [
+                "New",
+                "Replied",
+                "Booked",
+                "Closed"
+            ],
+            "default": "New",
+            "protected": true
+        },
+        "updated": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Updated",
+            "help": "Set automatically when the object is saved.",
+            "field": "datetime",
+            "settings": {
+                "onUpdate": true,
+                "readonly": true
+            }
+        },
+        "created": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Created",
+            "help": "Set automatically when the object is created.",
+            "field": "datetime",
+            "settings": {
+                "onCreate": true,
+                "readonly": true
+            }
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "email"
+    ],
+    "index": [
+        "id",
+        "name",
+        "email",
+        "topic",
+        "interest",
+        "status",
+        "updated",
+        "created"
+    ],
+    "formgrid": "name id\nemail phone\ntopic interest\npreferredDate place\nmessage message\nstatus status\nupdated created",
+    "updated": "2026-11-06T06:45:50+00:00",
+    "category": "Photographer"
+}

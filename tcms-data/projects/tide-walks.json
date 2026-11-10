@@ -1,0 +1,184 @@
+{
+    "id": "tide-walks",
+    "title": "Tide Walks",
+    "genre": "People Outdoors",
+    "location": "Pacific beaches",
+    "season": "Summer 2025",
+    "date": "2025-07-14T00:00:00-07:00",
+    "featured": false,
+    "draft": false,
+    "summary": "Families at the water's edge, at the end of the day when nobody's trying anymore.",
+    "story": "<p>Children don't hold a pose, and a beach doesn't ask them to. I bring these sessions to the tide line in the last hour of light and let everyone get their feet wet.</p>",
+    "gallery": [
+        {
+            "alt": "A mother and daughter in silhouette walking through the shallows under a gold evening sky",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "7e276bed",
+            "height": 1200,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "tide-mother-and-daughter.jpg",
+            "palette": [
+                "#968669",
+                "#c4c8b9",
+                "#b6a682",
+                "#41362f",
+                "#6d5d4f"
+            ],
+            "size": 228422,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:09-08:00",
+            "width": 1800,
+            "credit": {
+                "author": "Lucas Pezeta",
+                "authorUrl": "https://www.pexels.com/@lucaspezeta/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/2065835/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "A family of three walking on wet sand at dusk under a deep teal sky",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "3f307f79",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "tide-family-at-dusk.jpg",
+            "palette": [
+                "#597c81",
+                "#c2c6c3",
+                "#24252d",
+                "#554139",
+                "#80766f"
+            ],
+            "size": 176251,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:09-08:00",
+            "width": 1387,
+            "credit": {
+                "author": "Ingo Joseph",
+                "authorUrl": "https://www.pexels.com/@ingo/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/1694649/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "A mother and child walking hand in hand along a beach beside breaking waves",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "d198a9f7",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "tide-walk.jpg",
+            "palette": [
+                "#8b837a",
+                "#c7b2a5",
+                "#332922",
+                "#576666",
+                "#384647"
+            ],
+            "size": 185686,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:09-08:00",
+            "width": 1200,
+            "credit": {
+                "author": "Taryn Elliott",
+                "authorUrl": "https://www.pexels.com/@taryn-elliott/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/4305035/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "A mother holding her baby on a wide pale beach",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "dd2437b0",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "tide-baby.jpg",
+            "palette": [
+                "#f6e8d0",
+                "#94896d",
+                "#492c1a",
+                "#67553e",
+                "#a79f9b"
+            ],
+            "size": 211230,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:10-08:00",
+            "width": 1200,
+            "credit": {
+                "author": "\u041d\u0430\u0442\u0430\u0448\u0430 \u0427\u0438\u0436\u0435\u0432\u0441\u043a\u0430\u044f",
+                "authorUrl": "https://www.pexels.com/@76947110/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/8632470/",
+                "license": "Pexels License"
+            }
+        }
+    ],
+    "seo": {
+        "id": "seo",
+        "title": "",
+        "socialTitle": "",
+        "description": "",
+        "socialDescription": "",
+        "image": {
+            "alt": "",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "",
+            "height": 0,
+            "link": "",
+            "mime": "",
+            "name": "",
+            "palette": [],
+            "size": 0,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:08-08:00",
+            "width": 0
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    },
+    "updated": "2026-11-05T22:52:28-08:00",
+    "created": "2026-11-05T22:50:08-08:00",
+    "tint": 3
+}

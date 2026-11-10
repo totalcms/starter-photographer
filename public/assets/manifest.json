@@ -1,0 +1,34 @@
+{
+  "css/style.css": {
+    "file": "style-DqBO2THY.css",
+    "name": "style",
+    "names": [
+      "style.css"
+    ],
+    "src": "css/style.css",
+    "isEntry": true,
+    "assets": [
+      "hanken-grotesk-latin-CaVRRdDk.woff2",
+      "stix-two-text-latin-BTZaHlTl.woff2",
+      "stix-two-text-latin-italic-BDl6bBME.woff2"
+    ]
+  },
+  "fonts/hanken-grotesk-latin.woff2": {
+    "file": "hanken-grotesk-latin-CaVRRdDk.woff2",
+    "src": "fonts/hanken-grotesk-latin.woff2"
+  },
+  "fonts/stix-two-text-latin-italic.woff2": {
+    "file": "stix-two-text-latin-italic-BDl6bBME.woff2",
+    "src": "fonts/stix-two-text-latin-italic.woff2"
+  },
+  "fonts/stix-two-text-latin.woff2": {
+    "file": "stix-two-text-latin-BTZaHlTl.woff2",
+    "src": "fonts/stix-two-text-latin.woff2"
+  },
+  "js/app.js": {
+    "file": "app-DHir8IUo.js",
+    "name": "app",
+    "src": "js/app.js",
+    "isEntry": true
+  }
+}

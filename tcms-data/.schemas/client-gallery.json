@@ -1,0 +1,86 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/client-gallery.json",
+    "type": "object",
+    "id": "client-gallery",
+    "description": "A private set of photos for one client. Its page is a Site Builder page with the passcode feature on. Large versions are watermarked by this schema until the client has paid.",
+    "properties": {
+        "id": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json",
+            "label": "ID",
+            "help": "Made from the title. The client's page points at this ID.",
+            "field": "id",
+            "settings": {
+                "autogen": "${title}"
+            }
+        },
+        "title": {
+            "type": "string",
+            "label": "Client Name",
+            "help": "The name at the top of the page, e.g. Mara and Theo.",
+            "field": "text"
+        },
+        "session": {
+            "type": "string",
+            "label": "Session",
+            "help": "What and when, e.g. Golden Hour Session, September 2026.",
+            "field": "text"
+        },
+        "note": {
+            "type": "string",
+            "label": "Note to the Client",
+            "help": "A short personal note at the top of the gallery.",
+            "field": "textarea"
+        },
+        "gallery": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/gallery.json",
+            "label": "Photographs",
+            "help": "Drag this client's photos here. Large versions are watermarked automatically.",
+            "field": "gallery",
+            "settings": {
+                "watermark": {
+                    "marktext": "Proof",
+                    "marktextpos": "tile",
+                    "marktextcolor": "ffffff",
+                    "marktextalpha": 22,
+                    "limit": 700
+                }
+            }
+        },
+        "updated": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Updated",
+            "help": "Set automatically when the object is saved.",
+            "field": "datetime",
+            "settings": {
+                "onUpdate": true,
+                "readonly": true
+            }
+        },
+        "created": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Created",
+            "help": "Set automatically when the object is created.",
+            "field": "datetime",
+            "settings": {
+                "onCreate": true,
+                "readonly": true
+            }
+        }
+    },
+    "required": [
+        "id",
+        "title"
+    ],
+    "index": [
+        "id",
+        "title",
+        "session",
+        "gallery",
+        "updated",
+        "created"
+    ],
+    "formgrid": "title id\nsession session\nnote note\ngallery gallery\nupdated created",
+    "updated": "2026-11-06T06:45:50+00:00",
+    "category": "Photographer"
+}

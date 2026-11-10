@@ -1,0 +1,36 @@
+{#
+	Prints, sold by request rather than through a cart. "Request this print"
+	opens the Contact page with the print's title already filled in.
+
+	The photos here are watermarked by the print schema itself: the setting is on
+	the image property, so every large version is marked, and there's no address
+	that returns a clean file. Small thumbnails stay clean.
+#}
+{% extends 'layouts/default.twig' %}
+{% import 'macros/photo.twig' as photo %}
+
+{% set prints = cms.collection.objects('prints')|filterCollection([
+	{property: 'available', operator: 'equal', value: true}
+])|sortCollection([{property: 'order'}]) %}
+
+{% block content %}
+	{% include 'partials/band.twig' with {title: page.title, intro: page.data.intro|default('')} %}
+
+	{% for print in prints %}
+		<article class="sheet section grid{% if not loop.first %} fold{% endif %}" data-tracks="12" data-threshold="md" data-gap="lg" data-photo="{{ photo.color(print.image) }}">
+			<div class="print-photo" data-span="8">{{ cms.render.image(print, {w: 1400}, {collection: 'prints', property: 'image'}) }}</div>
+			<div class="stack" data-span="4" data-gap="sm">
+				<h2>{{ print.title }}</h2>
+				<p class="muted">{{ print.location }}</p>
+				<p>{{ print.note }}</p>
+				<div class="leaders">
+					{# Sizes is a deck: a set of rows, each with its own size and price. #}
+					{% for row in print.sizes %}
+						<div><span>{{ row.size }}</span><span>${{ row.price|number_format }}</span></div>
+					{% endfor %}
+				</div>
+				<p><a class="button" href="{{ cms.builder.url('contact') }}?interest={{ print.title|url_encode }}&amp;topic=print">Request this print</a></p>
+			</div>
+		</article>
+	{% endfor %}
+{% endblock %}

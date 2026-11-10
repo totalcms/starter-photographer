@@ -1,0 +1,79 @@
+{#
+	One project, at /work/{id}. The {id} in the page's route arrives as params.id.
+
+	Two things claim this address: this page, and the Projects collection's URL
+	setting (/work). The page wins, so it renders the project. The collection URL
+	is still needed: it gives each project its canonical link, its sitemap entry.
+	`tcms builder:routes` flags the pair as a duplicate. That warning is expected here.
+
+	This page is colored by its own cover. Every image Total CMS stores comes
+	with a palette of five colors, and "Page Color" on the project picks one.
+	That color becomes --photo, which tints the band. Change the cover and the
+	whole page follows.
+#}
+{% extends 'layouts/default.twig' %}
+{% import 'macros/photo.twig' as photo %}
+
+{% set project = cms.collection.object('projects', params.id) %}
+{% set cover = project.gallery|first %}
+{% set color = photo.color(cover, project.tint) %}
+
+{# Each project page gets its own title, description and social card. #}
+{% block seo %}{{ cms.seo.head(project, {collection: 'projects'}) }}{% endblock %}
+
+{% block photo %}{{ color }}{% endblock %}
+
+{% block content %}
+	{# A draft or a mistyped address gets the 404 page, not an empty page. #}
+	{% if project is empty or project.draft %}{{ cms.notFound() }}{% endif %}
+	{% include 'partials/band.twig' with {
+		title: project.title,
+		intro: project.summary,
+		facts: {'Location': project.location, 'Season': project.season, 'Body of work': project.genre}
+	} %}
+
+	{% if cover %}
+		<figure class="lead" data-photo="{{ color }}">
+			{{ cms.render.galleryImage(project.id, 'first', {w: 1800, h: 1000, fit: 'crop'}, {collection: 'projects', loading: 'eager'}) }}
+		</figure>
+	{% endif %}
+
+	<article class="sheet section grid" data-tracks="12" data-threshold="md" data-gap="lg" data-photo="{{ color }}">
+		<div class="prose" data-span="7" data-start="6">{{ project.story|raw }}</div>
+	</article>
+
+	{#
+		The gallery, with a lightbox. Thumbnails are cropped to one shape so the
+		grid stays even; the lightbox shows each photo whole. zoomFromOrigin is off
+		because the opening animation stretches a cropped thumbnail.
+	#}
+	<section class="sheet" aria-label="Photographs" data-photo="{{ color }}">
+		{{ cms.render.gallery(project.id, {w: 900, h: 700, fit: 'crop'}, {w: 1800}, {collection: 'projects', zoomFromOrigin: false, captions: true}) }}
+	</section>
+
+	{# The five colors found in the cover, and which one colors this page. #}
+	<section class="sheet swatches" aria-label="Colors from the cover photograph">
+		<ul class="cluster" data-gap="none" role="list">
+			{% for swatch in cover.palette %}
+				<li style="background: {{ swatch }}"{% if loop.index == project.tint %} data-current{% endif %}><span class="visually-hidden">{{ swatch }}</span></li>
+			{% endfor %}
+		</ul>
+	</section>
+
+	{#
+		The next project in the list, which loops back to the first at the end.
+		loop.index counts from 1, so all[loop.index] is the item after this one.
+		The panel takes that project's color, a preview of the page you're about to open.
+	#}
+	{% set all = cms.collection.query('projects', {filter: [{property: 'draft', operator: 'isfalse'}], sort: 'date:desc'}).objects %}
+	{% set next = all|first %}
+	{% for item in all %}
+		{% if item.id == project.id and not loop.last %}{% set next = all[loop.index] %}{% endif %}
+	{% endfor %}
+	<nav class="band next" aria-label="Next project" data-photo="{{ photo.color(next.gallery|first, next.tint) }}">
+		<a class="sheet" href="{{ cms.builder.url('project', {id: next.id}) }}">
+			<span>Next project</span>
+			<strong>{{ next.title }}</strong>
+		</a>
+	</nav>
+{% endblock %}

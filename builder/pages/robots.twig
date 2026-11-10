@@ -1,0 +1,12 @@
+{#-
+	Served at /robots.txt. It points crawlers at the sitemap, using this site's own address.
+	To keep search engines off a demo copy, add {"blockCrawlers": true} to this page's Data.
+-#}
+User-agent: *
+{% if page.data.blockCrawlers|default(false) -%}
+Disallow: /
+{%- else -%}
+Allow: /
+
+Sitemap: {{ cms.seo.data().site.baseUrl }}/sitemap.xml
+{%- endif %}

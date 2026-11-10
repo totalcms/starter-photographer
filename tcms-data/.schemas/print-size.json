@@ -1,0 +1,36 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/print-size.json",
+    "type": "object",
+    "id": "print-size",
+    "description": "One size of a print and its price. Used as a row in the Sizes table on a Print.",
+    "properties": {
+        "id": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json",
+            "label": "ID",
+            "help": "Identifies this row. Letters, numbers and underscores only.",
+            "field": "id"
+        },
+        "size": {
+            "type": "string",
+            "label": "Size",
+            "help": "The print size, e.g. 16 \u00d7 24 in.",
+            "field": "text"
+        },
+        "price": {
+            "type": "number",
+            "label": "Price",
+            "help": "The price in your currency, without the symbol.",
+            "field": "price"
+        }
+    },
+    "required": [
+        "id"
+    ],
+    "index": [
+        "id"
+    ],
+    "formgrid": "size price",
+    "updated": "2026-11-06T06:45:50+00:00",
+    "category": "Photographer"
+}

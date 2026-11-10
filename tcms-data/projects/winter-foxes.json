@@ -1,0 +1,150 @@
+{
+    "id": "winter-foxes",
+    "title": "Winter Foxes",
+    "genre": "Wildlife",
+    "location": "Northern woodland, in deep snow",
+    "season": "Winter 2026",
+    "date": "2026-02-02T00:00:00-08:00",
+    "featured": false,
+    "draft": false,
+    "summary": "Foxes hunting through fresh snow, photographed from a long way off and with a lot of patience.",
+    "story": "<p>A fox in snow has nowhere to hide and knows it, so I stay well back, stay downwind and let the animal decide how close it wants to be. Most days it decides not to.</p><p>The best frame here came on the eleventh morning, about four minutes before I gave up.</p>",
+    "gallery": [
+        {
+            "alt": "A red fox standing on a snowdrift at the edge of bare woods",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "251d1139",
+            "height": 1296,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "fox-on-the-drift.jpg",
+            "palette": [
+                "#625a54",
+                "#d8e0ec",
+                "#bd8c5f",
+                "#9a948e",
+                "#b0afb2"
+            ],
+            "size": 119709,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:04-08:00",
+            "width": 1800,
+            "credit": {
+                "author": "Anne-Marie Gionet-Lavoie",
+                "authorUrl": "https://www.pexels.com/@anne-marie-gionet-lavoie-811028326/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/20043202/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "A fox lying on a snowy path, looking straight at the camera",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "b162df7c",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "fox-at-rest.jpg",
+            "palette": [
+                "#dce2ef",
+                "#aebbd1",
+                "#8a99b5",
+                "#957f6b",
+                "#222e3b"
+            ],
+            "size": 155489,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:04-08:00",
+            "width": 1200,
+            "credit": {
+                "author": "Tom\u00e1\u0161 Mal\u00edk",
+                "authorUrl": "https://www.pexels.com/@tomas-malik-793526/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/10879199/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "A small red fox crossing a snow-covered forest floor under frosted branches",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "77421c95",
+            "height": 1100,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "fox-in-the-alders.jpg",
+            "palette": [
+                "#aeb2b3",
+                "#d3d5d7",
+                "#908d8b",
+                "#9fa1a6",
+                "#767979"
+            ],
+            "size": 375543,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:04-08:00",
+            "width": 1800,
+            "credit": {
+                "author": "Pixabay",
+                "authorUrl": "https://www.pexels.com/@pixabay/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/247395/",
+                "license": "Pexels License"
+            }
+        }
+    ],
+    "seo": {
+        "id": "seo",
+        "title": "",
+        "socialTitle": "",
+        "description": "",
+        "socialDescription": "",
+        "image": {
+            "alt": "",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "",
+            "height": 0,
+            "link": "",
+            "mime": "",
+            "name": "",
+            "palette": [],
+            "size": 0,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:04-08:00",
+            "width": 0
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    },
+    "updated": "2026-11-05T22:52:26-08:00",
+    "created": "2026-11-05T22:50:04-08:00",
+    "tint": 3
+}

@@ -1,0 +1,71 @@
+{#
+	Sessions: what a portrait session costs and what comes with it. Each package
+	is a Session in the admin; the questions are in Questions; the quotes are in
+	Testimonials. "Book this session" passes the session's name to the Contact
+	page in the address, and the form there fills it in.
+#}
+{% extends 'layouts/default.twig' %}
+{% import 'macros/photo.twig' as photo %}
+
+{% set sessions = cms.collection.objects('sessions')|sortCollection([{property: 'order'}]) %}
+{% set questions = cms.collection.objects('questions')|sortCollection([{property: 'order'}]) %}
+{% set quotes = cms.collection.objects('testimonials')|sortCollection([{property: 'order'}]) %}
+
+{% block content %}
+	{% include 'partials/band.twig' with {
+		title: page.title,
+		intro: page.data.intro|default('')
+	} %}
+
+	{#
+		The fee table. Each session is one row on the same four columns, so names,
+		fees and buttons line up the way they would on a printed price list.
+	#}
+	<section class="sheet section" aria-labelledby="packages-heading">
+		<h2 id="packages-heading" class="visually-hidden">Packages and fees</h2>
+		{% for session in sessions %}
+			<article class="grid session" data-tracks="12" data-threshold="md" data-gap="lg" data-photo="{{ photo.color(session.image) }}">
+				<div data-span="3">{{ cms.render.image(session, {w: 700, h: 500, fit: 'crop'}, {collection: 'sessions', property: 'image'}) }}</div>
+				<div class="stack" data-span="3" data-gap="xs">
+					<h3>{{ session.name }}</h3>
+					<p class="fee">${{ session.price|number_format }}</p>
+					<dl class="session-facts">
+						<div><dt>Time on location</dt><dd>{{ session.length }}</dd></div>
+						<div><dt>Best for</dt><dd>{{ session.bestFor }}</dd></div>
+					</dl>
+				</div>
+				<div class="stack" data-span="4" data-gap="sm">
+					<p class="story">{{ session.summary }}</p>
+					<ul>
+						{% for item in session.includes %}<li>{{ item }}</li>{% endfor %}
+					</ul>
+				</div>
+				<p data-span="2"><a class="button" href="{{ cms.builder.url('contact') }}?interest={{ session.name|url_encode }}">Book this</a></p>
+			</article>
+		{% endfor %}
+	</section>
+
+	<section class="band" aria-label="What clients say">
+		<div class="sheet grid quotes" data-columns="3" data-min="xs" data-gap="xl">
+			{% for quote in quotes %}
+				<figure class="stack" data-gap="sm">
+					<blockquote>{{ quote.quote }}</blockquote>
+					<figcaption>{{ quote.name }}<br>{{ quote.context }}</figcaption>
+				</figure>
+			{% endfor %}
+		</div>
+	</section>
+
+	<section class="sheet section grid" data-tracks="12" data-threshold="md" data-gap="lg" aria-labelledby="questions-heading">
+		<h2 id="questions-heading" data-span="4">Common questions</h2>
+		{# An accordion built on <details>, so it opens with no JavaScript. The shared name keeps one open at a time. #}
+		<div class="accordion" data-span="8">
+			{% for item in questions %}
+				<details name="questions"{% if loop.first %} open{% endif %}>
+					<summary>{{ item.question }}</summary>
+					<p>{{ item.answer }}</p>
+				</details>
+			{% endfor %}
+		</div>
+	</section>
+{% endblock %}

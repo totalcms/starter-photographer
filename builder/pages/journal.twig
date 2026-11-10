@@ -1,0 +1,29 @@
+{#
+	The Journal list, four entries at a time, newest first. The page number comes
+	from the address, as in /journal?page=2.
+
+	Why links and not a Load More button? cms.render.loadMore fetches entries
+	through the public API, and opening the collection to that API would let
+	anyone read drafts too. Here the server does the filtering, so drafts stay
+	private and the page works without JavaScript.
+#}
+{% extends 'layouts/default.twig' %}
+
+{% block content %}
+	{% include 'partials/band.twig' with {title: page.title, intro: page.data.intro|default('')} %}
+
+	<section class="sheet section journal-list" aria-label="Entries">
+		{% set result = cms.collection.query('journal', {
+			filter: [{property: 'draft', operator: 'isfalse'}],
+			sort: 'date:desc',
+			limit: 4,
+			page: getData.page|default(1)
+		}) %}
+
+		{% for post in result.objects %}
+			{% include 'partials/journal-entry.twig' %}
+		{% endfor %}
+
+		{{ cms.render.paginationSimple(result.total, result.page, result.limit, 'page', 'Newer entries', 'Older entries') }}
+	</section>
+{% endblock %}

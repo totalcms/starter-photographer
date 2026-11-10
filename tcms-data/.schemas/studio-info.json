@@ -1,0 +1,109 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/studio-info.json",
+    "type": "object",
+    "id": "studio-info",
+    "description": "The photographer's details: name, one-line introduction, contact, portrait and the About page story. The collection holds one object; every page reads from it.",
+    "properties": {
+        "id": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json",
+            "label": "ID",
+            "help": "Always 'info'. The templates look the object up by this ID, so leave it alone.",
+            "field": "id"
+        },
+        "name": {
+            "type": "string",
+            "label": "Name",
+            "help": "The name on the site: a person or a studio. Shown in the title band, the footer and page titles. Shorter names look better at display size.",
+            "field": "text"
+        },
+        "tagline": {
+            "type": "string",
+            "label": "One-Sentence Introduction",
+            "help": "One plain sentence beside the name on the home page: what you shoot and where.",
+            "field": "textarea"
+        },
+        "base": {
+            "type": "string",
+            "label": "Home Base",
+            "help": "Where you are based, e.g. North Cascades, Washington. Shown in the footer and on the Contact page.",
+            "field": "text"
+        },
+        "email": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/email.json",
+            "label": "Email",
+            "help": "Public email address, shown on the Contact page and in the footer.",
+            "field": "email"
+        },
+        "phone": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/phone.json",
+            "label": "Phone",
+            "help": "Public phone number. Leave empty to hide it everywhere.",
+            "field": "phone"
+        },
+        "instagram": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/url.json",
+            "label": "Instagram Link",
+            "help": "Full address of your Instagram profile. Leave empty to hide the link.",
+            "field": "url"
+        },
+        "responseTime": {
+            "type": "string",
+            "label": "Reply Time",
+            "help": "What to expect after someone writes, e.g. I reply within two working days. Shown on the Contact page.",
+            "field": "text"
+        },
+        "portrait": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/image.json",
+            "label": "Your Portrait",
+            "help": "A photo of you at work, for the About page. Portrait orientation works best.",
+            "field": "image"
+        },
+        "intro": {
+            "type": "string",
+            "label": "About Page Introduction",
+            "help": "Two or three sentences at the top of the About page.",
+            "field": "textarea"
+        },
+        "story": {
+            "type": "string",
+            "label": "Your Story",
+            "help": "The rest of the About page: how you got here, how you work, what a session feels like. Three or four short paragraphs.",
+            "field": "styledtext"
+        },
+        "updated": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Updated",
+            "help": "Set automatically when the object is saved.",
+            "field": "datetime",
+            "settings": {
+                "onUpdate": true,
+                "readonly": true
+            }
+        },
+        "created": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Created",
+            "help": "Set automatically when the object is created.",
+            "field": "datetime",
+            "settings": {
+                "onCreate": true,
+                "readonly": true
+            }
+        }
+    },
+    "required": [
+        "id",
+        "name"
+    ],
+    "index": [
+        "id",
+        "name",
+        "email",
+        "updated",
+        "created"
+    ],
+    "formgrid": "id name\ntagline tagline\nbase email\nphone instagram\nresponseTime responseTime\nportrait portrait\nintro intro\nstory story\nupdated created",
+    "updated": "2026-11-06T06:45:51+00:00",
+    "category": "Photographer"
+}

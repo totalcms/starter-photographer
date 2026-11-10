@@ -1,0 +1,15 @@
+{#
+	One project in a list: its cover photo, title and where it was made.
+	The cover is always the first photo in the project's gallery, so dragging
+	another photo to the front in the admin changes it here.
+
+	Expects: project (one object from the projects collection)
+#}
+{% import 'macros/photo.twig' as photo %}
+<article class="panel" data-photo="{{ photo.color(project.gallery|first, project.tint) }}">
+	<a href="{{ cms.builder.url('project', {id: project.id}) }}">
+		{% if project.gallery %}{{ cms.render.galleryImage(project.id, 'first', {w: 900, h: 1125, fit: 'crop'}, {collection: 'projects'}) }}{% endif %}
+		<h3>{{ project.title }}</h3>
+		<p>{{ project.location }}</p>
+	</a>
+</article>

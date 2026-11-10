@@ -1,0 +1,151 @@
+{
+    "id": "seo-site",
+    "siteName": "Wren Alder",
+    "baseUrl": "",
+    "titleTemplate": "${title} | ${site}",
+    "socialTitleTemplate": "${title}",
+    "defaultDescription": "Nature and outdoor portrait photography from the North Cascades. See the work, read the Journal and book a session.",
+    "defaultSocialDescription": "",
+    "defaultImage": {
+        "alt": "Dawn light over a still mountain lake",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "dd1a8dd2",
+        "height": 630,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "social-card.jpg",
+        "palette": [
+            "#1e2428",
+            "#858b8d",
+            "#decdb6",
+            "#535e65",
+            "#bbb3a4"
+        ],
+        "size": 40351,
+        "tags": [],
+        "uploadDate": "2026-11-05T23:03:18-08:00",
+        "width": 1200,
+        "credit": {
+            "author": "Parveen Singh",
+            "authorUrl": "https://www.pexels.com/@psingh/",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/19157269/",
+            "license": "Pexels License"
+        }
+    },
+    "twitterHandle": "",
+    "organizationName": "Wren Alder",
+    "organizationLogo": {
+        "alt": "",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "56323d4c",
+        "height": 512,
+        "link": "",
+        "mime": "image/png",
+        "name": "icon.png",
+        "palette": [
+            "#fbfbf3",
+            "#2b3b33",
+            "#bac0b9",
+            "#757d76",
+            "#a7aca4"
+        ],
+        "size": 47843,
+        "tags": [],
+        "uploadDate": "2026-11-05T23:03:18-08:00",
+        "width": 512
+    },
+    "icon": {
+        "alt": "",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "56323d4c",
+        "height": 512,
+        "link": "",
+        "mime": "image/png",
+        "name": "icon.png",
+        "palette": [
+            "#fbfbf3",
+            "#2b3b33",
+            "#bac0b9",
+            "#757d76",
+            "#a7aca4"
+        ],
+        "size": 47843,
+        "tags": [],
+        "uploadDate": "2026-11-05T23:03:18-08:00",
+        "width": 512
+    },
+    "touchIcon": {
+        "alt": "",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "56323d4c",
+        "height": 512,
+        "link": "",
+        "mime": "image/png",
+        "name": "icon.png",
+        "palette": [
+            "#fbfbf3",
+            "#2b3b33",
+            "#bac0b9",
+            "#757d76",
+            "#a7aca4"
+        ],
+        "size": 47843,
+        "tags": [],
+        "uploadDate": "2026-11-05T23:03:18-08:00",
+        "width": 512
+    },
+    "iconSvg": {
+        "tags": [],
+        "password": "",
+        "uploadDate": "2026-11-05T23:03:18-08:00",
+        "protected": true,
+        "mime": "image/svg+xml",
+        "download": "icon.svg",
+        "name": "icon.svg",
+        "ext": "svg",
+        "comments": "",
+        "size": 178,
+        "count": 0
+    },
+    "themeColor": "",
+    "sameAs": "",
+    "contactEmail": "hello@example.com",
+    "contactUrl": "",
+    "metaTags": "",
+    "emitJsonLd": true,
+    "emitSocial": true,
+    "emitGenerator": true,
+    "indexNowEnabled": false,
+    "indexNowKey": "6m04lh3cqawsjilswmd680airihb3pb5",
+    "created": "2026-11-05T23:03:15-08:00",
+    "updated": "2026-11-05T23:13:35-08:00"
+}

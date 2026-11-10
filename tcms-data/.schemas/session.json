@@ -1,0 +1,115 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/session.json",
+    "type": "object",
+    "id": "session",
+    "description": "One portrait package on the Sessions page. Lists the fee, the time on location and what is included.",
+    "properties": {
+        "id": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json",
+            "label": "ID",
+            "help": "Made from the title. It becomes the page address, so avoid changing it once the page is shared.",
+            "field": "id",
+            "settings": {
+                "autogen": "${name}"
+            }
+        },
+        "name": {
+            "type": "string",
+            "label": "Name",
+            "help": "Name of the package, e.g. Golden Hour Session.",
+            "field": "text"
+        },
+        "price": {
+            "type": "number",
+            "label": "Fee",
+            "help": "The price in your currency, without the symbol.",
+            "field": "price"
+        },
+        "length": {
+            "type": "string",
+            "label": "Time on Location",
+            "help": "How long you shoot, e.g. 90 minutes.",
+            "field": "text"
+        },
+        "bestFor": {
+            "type": "string",
+            "label": "Best For",
+            "help": "Who it suits, in a few words, e.g. couples and new families.",
+            "field": "text"
+        },
+        "summary": {
+            "type": "string",
+            "label": "Summary",
+            "help": "One or two sentences describing the session.",
+            "field": "textarea"
+        },
+        "includes": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/list.json",
+            "label": "What's Included",
+            "help": "One item per line, e.g. 40 edited photos. Shown as a list on the Sessions page.",
+            "field": "list"
+        },
+        "image": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/image.json",
+            "label": "Photo",
+            "help": "A photo from a session like this one.",
+            "field": "image"
+        },
+        "order": {
+            "type": "number",
+            "label": "Order",
+            "help": "Position in the fee table. Lower numbers come first.",
+            "field": "number",
+            "default": 0
+        },
+        "featured": {
+            "type": "boolean",
+            "label": "Show on Home Page",
+            "help": "Turn on to include this package in the fee table on the home page.",
+            "field": "toggle",
+            "default": false
+        },
+        "updated": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Updated",
+            "help": "Set automatically when the object is saved.",
+            "field": "datetime",
+            "settings": {
+                "onUpdate": true,
+                "readonly": true
+            }
+        },
+        "created": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Created",
+            "help": "Set automatically when the object is created.",
+            "field": "datetime",
+            "settings": {
+                "onCreate": true,
+                "readonly": true
+            }
+        }
+    },
+    "required": [
+        "id",
+        "name"
+    ],
+    "index": [
+        "id",
+        "name",
+        "price",
+        "length",
+        "order",
+        "featured",
+        "bestFor",
+        "summary",
+        "includes",
+        "image",
+        "updated",
+        "created"
+    ],
+    "formgrid": "name id\nprice length\nbestFor bestFor\nsummary summary\nincludes includes\nimage image\norder featured\nupdated created",
+    "updated": "2026-11-05T22:59:12-08:00",
+    "category": "Photographer"
+}

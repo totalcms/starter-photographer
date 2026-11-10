@@ -1,0 +1,146 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/project.json",
+    "type": "object",
+    "id": "project",
+    "description": "One body of work with its own page: a title, a story, where it was made and a gallery of photographs. The first photo in the gallery is the cover, and its colors tint the project's page.",
+    "properties": {
+        "id": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json",
+            "label": "ID",
+            "help": "Made from the title. It becomes the page address, so avoid changing it once the page is shared.",
+            "field": "id",
+            "settings": {
+                "autogen": "${title}"
+            }
+        },
+        "title": {
+            "type": "string",
+            "label": "Title",
+            "help": "Short and specific, e.g. Winter Foxes. Shown in the title band of the project's page.",
+            "field": "text"
+        },
+        "genre": {
+            "type": "string",
+            "label": "Body of Work",
+            "help": "Which of the four bodies of work this project belongs to. The Work page filters by it. To rename these, edit the options in this schema and the list at the top of pages\/work.twig.",
+            "field": "select",
+            "options": [
+                "Wildlife",
+                "Landscapes",
+                "Cities",
+                "People Outdoors"
+            ],
+            "default": "Landscapes"
+        },
+        "location": {
+            "type": "string",
+            "label": "Location",
+            "help": "Where it was made, in everyday words. Shown beside the story.",
+            "field": "text"
+        },
+        "season": {
+            "type": "string",
+            "label": "Season",
+            "help": "When it was made, e.g. Winter 2025. Shown beside the story.",
+            "field": "text"
+        },
+        "date": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Date",
+            "help": "Sets the order: the newest project comes first on the Work page. Only the order uses it.",
+            "field": "date"
+        },
+        "featured": {
+            "type": "boolean",
+            "label": "Show on Home Page",
+            "help": "Turn on to show this project on the home page. Three look best. The newest featured project is the large photo at the top.",
+            "field": "toggle",
+            "default": false
+        },
+        "draft": {
+            "type": "boolean",
+            "label": "Draft",
+            "help": "Turn on to hide this project from the site while you work on it.",
+            "field": "toggle",
+            "default": false
+        },
+        "summary": {
+            "type": "string",
+            "label": "Summary",
+            "help": "One or two sentences. Used on the Work and home pages and in search results.",
+            "field": "textarea"
+        },
+        "story": {
+            "type": "string",
+            "label": "Story",
+            "help": "The story behind the project, written as you'd tell it. Two or three short paragraphs.",
+            "field": "styledtext"
+        },
+        "gallery": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/gallery.json",
+            "label": "Photographs",
+            "help": "Drag photos here, then drag them into order. The first photo is the cover, and the page takes its color from it. Add alt text to every photo.",
+            "field": "gallery"
+        },
+        "seo": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/seo.json",
+            "label": "Search and Sharing",
+            "help": "How this page appears in search results and when shared. Leave it empty and the title and summary are used.",
+            "field": "card",
+            "schemaref": "https:\/\/www.totalcms.co\/schemas\/seo.json"
+        },
+        "updated": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Updated",
+            "help": "Set automatically when the object is saved.",
+            "field": "datetime",
+            "settings": {
+                "onUpdate": true,
+                "readonly": true
+            }
+        },
+        "created": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Created",
+            "help": "Set automatically when the object is created.",
+            "field": "datetime",
+            "settings": {
+                "onCreate": true,
+                "readonly": true
+            }
+        },
+        "tint": {
+            "type": "number",
+            "label": "Page Color",
+            "help": "Every photo gives you five colors, shown as swatches on the project's page. Pick one, from 1 to 5, to color this page. It comes from the cover, so a new cover brings new colors.",
+            "field": "number",
+            "default": 1,
+            "minimum": 1,
+            "maximum": 5
+        }
+    },
+    "required": [
+        "id",
+        "title"
+    ],
+    "index": [
+        "id",
+        "title",
+        "genre",
+        "location",
+        "season",
+        "tint",
+        "date",
+        "featured",
+        "draft",
+        "summary",
+        "gallery",
+        "seo",
+        "updated",
+        "created"
+    ],
+    "formgrid": "title id\ngenre location\nseason date\nfeatured draft\ntint tint\nsummary summary\nstory story\ngallery gallery\nseo seo\nupdated created",
+    "updated": "2026-11-05T22:52:24-08:00",
+    "category": "Photographer"
+}

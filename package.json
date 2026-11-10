@@ -1,0 +1,16 @@
+{
+	"name": "totalcms-site",
+	"private": true,
+	"description": "Frontend asset pipeline for a Total CMS site. See FRONTEND.md.",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"watch": "vite build --watch",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"@foundation/yeti": "^7.0.0-alpha.2",
+		"vite": "^8.3.5"
+	}
+}

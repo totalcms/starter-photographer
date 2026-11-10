@@ -1,0 +1,150 @@
+{
+    "id": "owls-of-the-understory",
+    "title": "Owls of the Understory",
+    "genre": "Wildlife",
+    "location": "Mixed forest, spring to autumn",
+    "season": "Spring 2025",
+    "date": "2025-05-05T00:00:00-07:00",
+    "featured": false,
+    "draft": false,
+    "summary": "A long, quiet look at the birds you hear far more often than you see.",
+    "story": "<p>You find owls with your ears and by looking down: a scatter of pellets, a splash of white on the bark. Then you look up very slowly.</p><p>I never use calls or bait. Every bird here was going about its day, and I left it to get on with it.</p>",
+    "gallery": [
+        {
+            "alt": "A great gray owl perched on a stump in a forest clearing",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "40a1d4b6",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "great-gray-owl.jpg",
+            "palette": [
+                "#c0b0a5",
+                "#4d422d",
+                "#929c73",
+                "#85836a",
+                "#1a1b14"
+            ],
+            "size": 240814,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:10-08:00",
+            "width": 1800,
+            "credit": {
+                "author": "Alexas Fotos",
+                "authorUrl": "https://www.pexels.com/@alexasfotos/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/10768565/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "A young barred owl on a thin branch among new green leaves",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "9aa8d083",
+            "height": 1440,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "young-barred-owl.jpg",
+            "palette": [
+                "#585445",
+                "#e0e2e3",
+                "#abb676",
+                "#211e14",
+                "#a7a6a9"
+            ],
+            "size": 226143,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:11-08:00",
+            "width": 1800,
+            "credit": {
+                "author": "Andrew Patrick Photo",
+                "authorUrl": "https://www.pexels.com/@am83/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/23897177/",
+                "license": "Pexels License"
+            }
+        },
+        {
+            "alt": "A barred owl facing the camera with dark eyes and a striped chest",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "52ab98f5",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "barred-owl.jpg",
+            "palette": [
+                "#77686b",
+                "#d2d0dc",
+                "#b0afc1",
+                "#babdce",
+                "#231819"
+            ],
+            "size": 471164,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:11-08:00",
+            "width": 1800,
+            "credit": {
+                "author": "Aaron J Hill",
+                "authorUrl": "https://www.pexels.com/@aaron-j-hill-3434251/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/11512546/",
+                "license": "Pexels License"
+            }
+        }
+    ],
+    "seo": {
+        "id": "seo",
+        "title": "",
+        "socialTitle": "",
+        "description": "",
+        "socialDescription": "",
+        "image": {
+            "alt": "",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "",
+            "height": 0,
+            "link": "",
+            "mime": "",
+            "name": "",
+            "palette": [],
+            "size": 0,
+            "tags": [],
+            "uploadDate": "2026-11-05T22:50:10-08:00",
+            "width": 0
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    },
+    "updated": "2026-11-05T22:52:28-08:00",
+    "created": "2026-11-05T22:50:10-08:00",
+    "tint": 3
+}

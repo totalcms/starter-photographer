@@ -1,0 +1,48 @@
+{#
+	The Work page: every project, newest first, in a fixed grid.
+
+	The filter uses plain links such as /work?genre=Wildlife. Anything after the
+	? arrives in Twig as getData, so getData.genre is the chosen body of work.
+	Because they are links, the filtered pages can be bookmarked and shared.
+#}
+{% extends 'layouts/default.twig' %}
+
+{# The four bodies of work are the options on the Body of Work field in the project schema. #}
+{% set genres = cms.schema.get('project').properties.genre.options %}
+{% set genre = getData.genre|default('') %}
+
+{# Always hide drafts. Only add the genre filter when one was chosen and is one of ours. #}
+{% set filter = [{property: 'draft', operator: 'isfalse'}] %}
+{% if genre in genres %}
+	{% set filter = filter|merge([{property: 'genre', value: genre}]) %}
+{% endif %}
+
+{% set projects = cms.collection.query('projects', {filter: filter, sort: 'date:desc'}).objects %}
+
+{% block content %}
+	{% include 'partials/band.twig' with {
+		title: genre in genres ? genre : 'Work',
+		intro: page.data.intro
+	} %}
+
+	<div class="sheet filter">
+		<nav aria-label="Filter by body of work">
+			<ul class="cluster" data-gap="md" role="list">
+				<li><a href="{{ cms.builder.url('work') }}"{% if genre not in genres %} aria-current="page"{% endif %}>All work</a></li>
+				{% for item in genres %}
+					<li><a href="?genre={{ item|url_encode }}"{% if genre == item %} aria-current="page"{% endif %}>{{ item }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</div>
+
+	<section class="sheet" aria-label="Projects">
+		<div class="panels grid" data-columns="3" data-min="xs" data-gap="lg">
+			{% for project in projects %}
+				{% include 'partials/project-card.twig' %}
+			{% else %}
+				<p>No projects here yet.</p>
+			{% endfor %}
+		</div>
+	</section>
+{% endblock %}

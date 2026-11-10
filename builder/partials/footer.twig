@@ -1,0 +1,25 @@
+{#
+	The closing band, the same color as the title band. Everything here comes
+	from Studio Info. Phone and Instagram are hidden when those fields are empty.
+#}
+<footer class="band footer">
+	<div class="sheet grid" data-tracks="12" data-threshold="md" data-gap="lg">
+		<div class="stack" data-span="6" data-gap="sm">
+			<p class="footer-name">{{ info.name }}</p>
+			<p>{{ info.base }}</p>
+		</div>
+		<ul class="stack" data-span="3" data-gap="xs" role="list">
+			<li><a href="mailto:{{ info.email }}">{{ info.email }}</a></li>
+			{% if info.phone %}<li><a href="tel:{{ info.phone|replace({' ': '', '(': '', ')': '', '-': ''}) }}">{{ info.phone }}</a></li>{% endif %}
+			{% if info.instagram %}<li><a href="{{ info.instagram }}">Instagram</a></li>{% endif %}
+		</ul>
+		<ul class="stack" data-span="3" data-gap="xs" role="list">
+			<li><a href="{{ cms.builder.url('prints') }}">Prints</a></li>
+			{# The RSS feed is built in. Turn it on or off in the Journal collection's settings. #}
+			<li><a href="/feed/rss/journal">Journal RSS feed</a></li>
+			<li>&copy; {{ 'now'|date('Y') }} {{ info.name }}</li>
+			{# The Built with Total CMS badge. 'mono' follows the footer's text color. #}
+			<li>{{ cms.badge.text({theme: 'mono'}) }}</li>
+		</ul>
+	</div>
+</footer>

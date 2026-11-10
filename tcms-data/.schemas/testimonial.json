@@ -1,0 +1,88 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/testimonial.json",
+    "type": "object",
+    "id": "testimonial",
+    "description": "A few words from a past client. Replace the demo quotes with real ones before launch.",
+    "properties": {
+        "id": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json",
+            "label": "ID",
+            "help": "Made from the name. No need to change it.",
+            "field": "id",
+            "settings": {
+                "autogen": "${name}"
+            }
+        },
+        "name": {
+            "type": "string",
+            "label": "Client Name",
+            "help": "The name to show, e.g. Priya and Sam. Ask the client how they would like to be named.",
+            "field": "text"
+        },
+        "context": {
+            "type": "string",
+            "label": "Session",
+            "help": "What you shot together, e.g. Family session at Larrabee.",
+            "field": "text"
+        },
+        "quote": {
+            "type": "string",
+            "label": "Quote",
+            "help": "Their words, lightly trimmed if you need to. Two or three sentences read best.",
+            "field": "textarea"
+        },
+        "featured": {
+            "type": "boolean",
+            "label": "Show on Home Page",
+            "help": "Turn on to use this quote on the home page. The first one by order is shown.",
+            "field": "toggle",
+            "default": false
+        },
+        "order": {
+            "type": "number",
+            "label": "Order",
+            "help": "Lower numbers come first.",
+            "field": "number",
+            "default": 0
+        },
+        "updated": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Updated",
+            "help": "Set automatically when the object is saved.",
+            "field": "datetime",
+            "settings": {
+                "onUpdate": true,
+                "readonly": true
+            }
+        },
+        "created": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Created",
+            "help": "Set automatically when the object is created.",
+            "field": "datetime",
+            "settings": {
+                "onCreate": true,
+                "readonly": true
+            }
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "quote"
+    ],
+    "index": [
+        "id",
+        "name",
+        "context",
+        "quote",
+        "featured",
+        "order",
+        "updated",
+        "created"
+    ],
+    "formgrid": "name id\ncontext context\nquote quote\nfeatured order\nupdated created",
+    "updated": "2026-11-06T06:45:52+00:00",
+    "category": "Photographer"
+}

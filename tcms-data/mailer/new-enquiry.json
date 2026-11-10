@@ -1,0 +1,22 @@
+{
+    "id": "new-enquiry",
+    "active": true,
+    "requireBotProtection": false,
+    "name": "New Enquiry",
+    "category": "Website",
+    "description": "Sent to the photographer when someone fills in the Contact form. Needs SMTP set up under Settings.",
+    "from": "",
+    "fromName": "",
+    "to": "{{ cms.collection.object('info', 'info').email }}",
+    "toName": "",
+    "replyTo": "{{ data.email }}",
+    "cc": "",
+    "bcc": "",
+    "subject": "New enquiry from {{ data.name }}: {{ data.topic }}",
+    "bodyHtml": "<p><strong>{{ data.name }}</strong> ({{ data.email }}{% if data.phone %}, {{ data.phone }}{% endif %}) wrote in about: {{ data.topic }}{% if data.interest %} ({{ data.interest }}){% endif %}.</p>{% if data.preferredDate %}<p>Preferred date: {{ data.preferredDate|date('F j, Y') }}</p>{% endif %}{% if data.place %}<p>Place in mind: {{ data.place }}</p>{% endif %}<p>{{ data.message|nl2br }}</p>",
+    "bodyText": "{{ data.name }} ({{ data.email }}) wrote in about: {{ data.topic }}\n\n{{ data.message }}",
+    "bulkCollection": "",
+    "bulkInclude": "",
+    "bulkExclude": "",
+    "updated": "2026-11-05T22:52:30-08:00"
+}

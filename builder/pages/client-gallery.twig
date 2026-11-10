@@ -1,0 +1,33 @@
+{#
+	A private gallery for one client. Each client gets their own page in Site
+	Builder, sharing this template:
+
+	  1. Add a Client Gallery with their photos.
+	  2. Add a page with this template and turn on the Protect feature.
+	  3. In the page's Data, set "gallery" to the gallery's ID and "passcode" to
+	     a number you choose, in quotes: {"gallery": "mara-and-theo", "passcode": "8675"}
+
+	The Protect extension shows a passcode screen before this template runs.
+	Signed-in admins skip it. The page stays out of the nav and the sitemap.
+
+	Large photos are watermarked by the client-gallery schema, so a client can't
+	take the clean files before they have paid.
+#}
+{% extends 'layouts/default.twig' %}
+{% import 'macros/photo.twig' as photo %}
+
+{% set gallery = cms.collection.object('client-galleries', page.data.gallery) %}
+
+{% block photo %}{{ photo.color(gallery.gallery|first, 4) }}{% endblock %}
+
+{% block content %}
+	{% include 'partials/band.twig' with {title: gallery.title, intro: gallery.session} %}
+
+	<section class="sheet section grid" data-tracks="12" data-threshold="md" data-gap="lg">
+		<p class="prose" data-span="7" data-start="6">{{ gallery.note }}</p>
+	</section>
+
+	<section class="sheet section" aria-label="Your photographs">
+		{{ cms.render.gallery(gallery.id, {w: 600, h: 600, fit: 'crop'}, {w: 1600}, {collection: 'client-galleries', zoomFromOrigin: false, download: false}) }}
+	</section>
+{% endblock %}

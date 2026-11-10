@@ -1,0 +1,61 @@
+{
+    "id": "lake-at-first-light",
+    "title": "Lake at First Light",
+    "location": "Coast Mountains, British Columbia",
+    "order": 1,
+    "note": "Archival pigment on cotton rag. Signed on the back.",
+    "image": {
+        "alt": "Dawn light breaking through heavy cloud over a still mountain lake",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "a0f6c619",
+        "height": 1200,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "lake-at-first-light.jpg",
+        "palette": [
+            "#a1a39f",
+            "#ddcbb4",
+            "#21262a",
+            "#525d64",
+            "#444342"
+        ],
+        "size": 96430,
+        "tags": [],
+        "uploadDate": "2026-11-05T22:50:16-08:00",
+        "width": 1800,
+        "credit": {
+            "author": "Parveen Singh",
+            "authorUrl": "https://www.pexels.com/@psingh/",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/19157269/",
+            "license": "Pexels License"
+        }
+    },
+    "sizes": {
+        "size_1": {
+            "id": "size_1",
+            "size": "12 \u00d7 18 in.",
+            "price": 140
+        },
+        "size_2": {
+            "id": "size_2",
+            "size": "16 \u00d7 24 in.",
+            "price": 220
+        },
+        "size_3": {
+            "id": "size_3",
+            "size": "24 \u00d7 36 in.",
+            "price": 420
+        }
+    },
+    "available": true,
+    "updated": "2026-11-05T22:50:16-08:00",
+    "created": "2026-11-05T22:50:16-08:00"
+}

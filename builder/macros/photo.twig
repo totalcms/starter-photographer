@@ -1,0 +1,15 @@
+{#
+	One helper, used by every page that takes its color from a photograph.
+
+	Total CMS stores a palette of five colors with each image. photo.color()
+	returns one of them. With no image it returns the site's quiet green, which
+	is also the color of every page that has no photo of its own.
+
+	  {% import 'macros/photo.twig' as photo %}
+	  {{ photo.color(image) }}      the image's first color
+	  {{ photo.color(image, 3) }}   its third color
+	  {{ photo.color() }}           the quiet green
+#}
+{% macro color(image, pick = 1) -%}
+	{{ image.palette[pick - 1]|default('#3f5249') }}
+{%- endmacro %}

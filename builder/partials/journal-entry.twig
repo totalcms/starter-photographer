@@ -1,0 +1,16 @@
+{#
+	One entry in the Journal list.
+
+	Expects: post (one object from the journal collection)
+#}
+{% import 'macros/photo.twig' as photo %}
+<article class="grid entry" data-tracks="12" data-threshold="md" data-gap="lg" data-photo="{{ photo.color(post.image) }}">
+	<a href="{{ cms.builder.url('journal-post', {id: post.id}) }}" data-span="5">
+		{{ cms.render.image(post, {w: 900, h: 600, fit: 'crop'}, {collection: 'journal', property: 'image'}) }}
+	</a>
+	<div class="stack" data-span="7" data-gap="xs">
+		<h2><a href="{{ cms.builder.url('journal-post', {id: post.id}) }}">{{ post.title }}</a></h2>
+		<p>{{ post.summary|striptags }}</p>
+		<p class="muted"><time datetime="{{ post.date|date('Y-m-d', false) }}">{{ post.date|date('F j, Y', false) }}</time></p>
+	</div>
+</article>

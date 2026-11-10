@@ -1,0 +1,119 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/print.json",
+    "type": "object",
+    "id": "print",
+    "description": "One photograph offered as a print. Photos on the Prints page are watermarked by this schema, so the clean file can't be taken from the site. Visitors ask for a print through the Contact form.",
+    "properties": {
+        "id": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json",
+            "label": "ID",
+            "help": "Made from the title. The Contact form uses it to know which print someone asked about.",
+            "field": "id",
+            "settings": {
+                "autogen": "${title}"
+            }
+        },
+        "title": {
+            "type": "string",
+            "label": "Title",
+            "help": "The title of the print.",
+            "field": "text"
+        },
+        "location": {
+            "type": "string",
+            "label": "Location",
+            "help": "Where it was made.",
+            "field": "text"
+        },
+        "order": {
+            "type": "number",
+            "label": "Order",
+            "help": "Position on the Prints page. Lower numbers come first.",
+            "field": "number",
+            "default": 0
+        },
+        "note": {
+            "type": "string",
+            "label": "Paper and Edition",
+            "help": "One line about paper, edition or framing.",
+            "field": "textarea"
+        },
+        "image": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/image.json",
+            "label": "Photograph",
+            "help": "The photograph. A watermark is added to large versions automatically. Change its wording in the print schema under this field's settings.",
+            "field": "image",
+            "settings": {
+                "watermark": {
+                    "marktext": "Proof",
+                    "marktextpos": "tile",
+                    "marktextcolor": "ffffff",
+                    "marktextalpha": 22,
+                    "limit": 700
+                }
+            }
+        },
+        "sizes": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/deck.json",
+            "label": "Sizes",
+            "help": "One row per size you offer.",
+            "field": "deckTable",
+            "schemaref": "https:\/\/www.totalcms.co\/schemas\/custom\/print-size.json",
+            "settings": {
+                "deckItemLabel": "${size}"
+            },
+            "patternProperties": {
+                "^[a-zA-Z]\\w*$": {
+                    "$ref": "https:\/\/www.totalcms.co\/schemas\/custom\/print-size.json"
+                }
+            }
+        },
+        "available": {
+            "type": "boolean",
+            "label": "Available",
+            "help": "Turn off to hide this print from the site without deleting it.",
+            "field": "toggle",
+            "default": true
+        },
+        "updated": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Updated",
+            "help": "Set automatically when the object is saved.",
+            "field": "datetime",
+            "settings": {
+                "onUpdate": true,
+                "readonly": true
+            }
+        },
+        "created": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Created",
+            "help": "Set automatically when the object is created.",
+            "field": "datetime",
+            "settings": {
+                "onCreate": true,
+                "readonly": true
+            }
+        }
+    },
+    "required": [
+        "id",
+        "title"
+    ],
+    "index": [
+        "id",
+        "title",
+        "location",
+        "order",
+        "available",
+        "image",
+        "note",
+        "sizes",
+        "updated",
+        "created"
+    ],
+    "formgrid": "title id\nlocation order\nnote note\nimage image\nsizes sizes\navailable available\nupdated created",
+    "updated": "2026-11-05T22:59:12-08:00",
+    "category": "Photographer"
+}

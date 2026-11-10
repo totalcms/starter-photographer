@@ -1,0 +1,25 @@
+{#
+	The solid title band at the top of a page: a big title on the left and one
+	sentence on the right. It is the first thing to change color with the photo.
+
+	Include it with the words to show:
+	  {% include 'partials/band.twig' with {title: 'Work', intro: 'One sentence.'} %}
+
+	Optional:
+	  facts  rows of label and value, shown under the sentence
+#}
+<header class="band">
+	<div class="sheet grid" data-tracks="12" data-threshold="md" data-gap="lg" data-align="end">
+		<h1 data-span="7">{{ title }}</h1>
+		<div class="stack" data-span="5" data-gap="md">
+			{% if intro is defined and intro %}<p class="band-intro">{{ intro }}</p>{% endif %}
+			{% if facts is defined %}
+				<dl class="facts">
+					{% for label, value in facts %}
+						{% if value %}<div><dt>{{ label }}</dt><dd>{{ value }}</dd></div>{% endif %}
+					{% endfor %}
+				</dl>
+			{% endif %}
+		</div>
+	</div>
+</header>

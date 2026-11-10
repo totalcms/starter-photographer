@@ -1,0 +1,30 @@
+{
+    "protect-data-directory": {
+        "ranAt": "2026-11-06T06:32:37Z",
+        "result": 1
+    },
+    "templates-to-builder": {
+        "ranAt": "2026-11-06T06:32:37Z",
+        "result": 0
+    },
+    "ensure-mcp-prompt-collection": {
+        "ranAt": "2026-11-06T06:32:37Z",
+        "result": 1
+    },
+    "ensure-automations-collection": {
+        "ranAt": "2026-11-06T06:32:37Z",
+        "result": 1
+    },
+    "builder-page-seo-fields": {
+        "ranAt": "2026-11-06T06:32:37Z",
+        "result": 0
+    },
+    "clear-public-read-on-sensitive-collections": {
+        "ranAt": "2026-11-06T06:32:37Z",
+        "result": 0
+    },
+    "enable-collection-feeds": {
+        "ranAt": "2026-11-06T06:32:37Z",
+        "result": 0
+    }
+}

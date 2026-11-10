@@ -1,0 +1,530 @@
+/* =========================================================================
+   Site theme, imported after Yeti by style.css. Run `npm run build` after
+   changing it (or `npm run watch` while you work).
+
+   The look: a folded visitor brochure. A solid title band in big type, one
+   huge photograph, then a strict grid of panels split by thin fold lines.
+   The band has no fixed color. It comes from the photograph on screen.
+
+   Rebranding: fonts are in the first block, and the paper, ink and warm accent
+   are in :root. Most sites never need to touch the rest.
+
+   Full Yeti reference: node_modules/@foundation/yeti/dist/llms.txt
+   Set public tokens here. Leave --_yeti-* alone: those are private.
+   ========================================================================= */
+
+/* ---- Fonts ----------------------------------------------------------
+   Self-hosted from fonts/ (SIL Open Font License, see static/fonts/OFL.txt).
+   Hanken Grotesk sets the titles and labels; STIX Two Text sets the stories.
+   To use other fonts, swap these files and the --yeti-font-* lines below. */
+@font-face {
+	font-family: "Hanken Grotesk";
+	src: url("../fonts/hanken-grotesk-latin.woff2") format("woff2");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "STIX Two Text";
+	src: url("../fonts/stix-two-text-latin.woff2") format("woff2");
+	font-weight: 400 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "STIX Two Text";
+	src: url("../fonts/stix-two-text-latin-italic.woff2") format("woff2");
+	font-weight: 400 700;
+	font-style: italic;
+	font-display: swap;
+}
+
+:root {
+	/* ---- Color --------------------------------------------------------
+	   A hue is an angle on the color wheel (oklch):
+	   25 red, 50 orange, 80 amber, 145 green, 200 teal, 250 blue, 300 violet. */
+
+	/* The one warm accent: links, buttons and the focus ring. Ember. */
+	--yeti-hue-primary: 48;
+	/* The faint warmth in the paper and the ink. */
+	--yeti-hue-neutral: 85;
+	--yeti-chroma: .13;
+
+	/* ---- Type --------------------------------------------------------- */
+	--yeti-font-sans: "Hanken Grotesk", system-ui, sans-serif;
+	--yeti-font-heading: "Hanken Grotesk", system-ui, sans-serif;
+	--yeti-weight-heading: 800;
+	--yeti-tracking-heading: -.02em;
+	--font-story: "STIX Two Text", Georgia, serif;
+
+	/* ---- Shape: a printed brochure has square corners. ---------------- */
+	--yeti-radius-sm: 0;
+	--yeti-radius-md: 0;
+	--yeti-radius-lg: 0;
+
+	/* ---- The band -----------------------------------------------------
+	   --photo is any color from a photograph, set on <html> by Twig and
+	   changed by js/app.js as you scroll. --band keeps its hue, fixes its
+	   lightness and limits its strength, so a pale or a neon photo still
+	   gives a dark band that white text can sit on. */
+	--band: oklch(from var(--photo) .27 clamp(.012, calc(c * .8), .05) h);
+	--on-band: oklch(.975 .006 85);
+	--on-band-muted: oklch(.86 .012 85);
+
+	/* ---- Paper and ink. light-dark(): light mode first, then dark. ---- */
+	--paper: light-dark(oklch(.975 .005 85), oklch(.17 .005 85));
+	--ink: light-dark(oklch(.21 .008 85), oklch(.93 .006 85));
+	--ink-muted: light-dark(oklch(.44 .01 85), oklch(.74 .008 85));
+	--fold: color-mix(in oklch, var(--ink) 18%, transparent);
+	--ember: light-dark(oklch(.5 .14 48), oklch(.76 .13 55));
+	--ember-strong: light-dark(oklch(.42 .13 48), oklch(.84 .11 60));
+
+	/* The page's side margin. Every section lines up on it. */
+	--margin: clamp(1rem, 3.5vw, 3rem);
+
+	/* Point Yeti's own colors at the paper, so its components print in the same inks. */
+	--yeti-color-surface: var(--paper);
+	--yeti-color-text: var(--ink);
+	--yeti-color-text-muted: var(--ink-muted);
+	--yeti-color-primary: var(--ember);
+	--yeti-color-primary-strong: var(--ember-strong);
+	--yeti-color-primary-text: var(--ember);
+	--yeti-on-primary: var(--paper);
+	--yeti-color-focus: var(--ember);
+	--yeti-color-border: var(--fold);
+	--yeti-table-border: var(--fold);
+	--yeti-link-color: var(--ink);
+	--yeti-link-color-hover: var(--ember);
+	--yeti-nav-surface: var(--band);
+	--yeti-nav-panel: var(--band);
+	--yeti-nav-panel-text: var(--on-band);
+	--yeti-nav-border: transparent;
+
+	--yeti-accordion-surface: transparent;
+	--yeti-accordion-summary: transparent;
+	--yeti-accordion-summary-hover: color-mix(in oklch, var(--ink) 6%, transparent);
+	--yeti-accordion-border: var(--fold);
+
+	/* The narrowest a gallery thumbnail may get, for three across on a laptop. */
+	--cms-gallery-min-size: 19rem;
+
+	accent-color: var(--ember);
+	caret-color: var(--ember);
+	scrollbar-color: var(--ink-muted) transparent;
+}
+
+::selection {
+	background: var(--band);
+	color: var(--on-band);
+}
+
+/* Everything from here sits in Yeti's component layer, so a page can still
+   override it with a plain rule. */
+@layer yeti.components {
+	/* ---- The band: title band, quotes, next project, footer -------------
+	   color-scheme: dark keeps Yeti's links and buttons correct on it, in both
+	   light and dark mode. The transition is the slow color change on scroll. */
+	.band {
+		color-scheme: dark;
+		background-color: var(--band);
+		color: var(--on-band);
+		padding-block: clamp(2rem, 4.5vw, 4rem);
+		transition: background-color .9s cubic-bezier(.16, 1, .3, 1);
+
+		--yeti-link-color: var(--on-band);
+		--yeti-link-color-hover: var(--on-band-muted);
+		--yeti-color-primary: oklch(.8 .12 62);
+		--yeti-color-primary-strong: oklch(.87 .1 66);
+		--yeti-on-primary: oklch(.2 .02 60);
+	}
+	.band h1 {
+		font-size: clamp(3rem, 8.5vw, 7.5rem);
+		line-height: .98;
+		letter-spacing: -.035em;
+		text-wrap: balance;
+		color: inherit;
+	}
+	.band-intro {
+		font-family: var(--font-story);
+		font-size: clamp(1.15rem, 1.7vw, 1.5rem);
+		line-height: 1.35;
+		max-inline-size: 34ch;
+		text-wrap: pretty;
+	}
+
+	/* The nav is the top strip of the band, in the same moving color. */
+	.nav {
+		color-scheme: dark;
+		padding-inline: var(--margin);
+		transition: background-color .9s cubic-bezier(.16, 1, .3, 1);
+	}
+	.nav [data-brand] {
+		display: inline-flex;
+		align-items: center;
+		gap: .55em;
+		font-weight: 800;
+		letter-spacing: -.01em;
+	}
+	.logo {
+		inline-size: 1.4em;
+		block-size: 1.4em;
+		flex: none;
+	}
+
+	/* ---- The sheet: the page's one column width ------------------------- */
+	.sheet {
+		inline-size: 100%;
+		max-inline-size: 100rem;
+		margin-inline: auto;
+		padding-inline: var(--margin);
+	}
+	.section {
+		padding-block: clamp(3rem, 7vw, 6.5rem);
+	}
+	.fold {
+		position: relative;
+	}
+	.fold::before {
+		content: "";
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline: var(--margin);
+		border-block-start: 1px solid var(--fold);
+	}
+
+	main img {
+		display: block;
+		inline-size: 100%;
+		block-size: auto;
+	}
+	h2 {
+		font-size: clamp(1.9rem, 3.2vw, 3rem);
+		line-height: 1.05;
+		text-wrap: balance;
+	}
+	.muted {
+		color: var(--ink-muted);
+	}
+
+	/* ---- Facts: label and value, like the side of a visitor map ----- */
+	.facts {
+		display: grid;
+		gap: .35rem;
+		font-size: var(--yeti-text-sm);
+		border-block-start: 1px solid color-mix(in oklch, var(--on-band) 30%, transparent);
+		padding-block-start: .75rem;
+	}
+	.facts div {
+		display: grid;
+		grid-template-columns: 8.5rem 1fr;
+		gap: 1rem;
+	}
+	.facts dt {
+		color: var(--on-band-muted);
+	}
+	.facts dd {
+		margin: 0;
+		font-weight: 600;
+	}
+
+	/* ---- The lead photograph: edge to edge, nothing on top of it -------- */
+	.lead {
+		margin: 0;
+	}
+	.lead img {
+		block-size: clamp(22rem, 72svh, 62rem);
+		object-fit: cover;
+	}
+	/* On the home page the photo and its caption both fit the first screen. */
+	.lead:has(.strip) img {
+		block-size: clamp(20rem, calc(100svh - 24rem), 62rem);
+	}
+	.strip {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: .25rem 2rem;
+		padding-block: .8rem;
+		font-size: var(--yeti-text-sm);
+		font-weight: 600;
+		border-block-end: 1px solid var(--fold);
+	}
+
+	/* ---- Panels: a row of equal columns split by fold lines ------------- */
+	.panels {
+		overflow: clip;
+	}
+	.panels-row {
+		padding-block-start: var(--yeti-space-lg);
+	}
+	.panel {
+		position: relative;
+		padding-block-end: 1.5rem;
+	}
+	/* The fold sits in the middle of the gap. On the first panel of a row it
+	   falls outside the grid, where .panels clips it. */
+	.panel::before {
+		content: "";
+		position: absolute;
+		inset-block: 0;
+		inset-inline-start: calc(var(--yeti-space-lg) / -2);
+		border-inline-start: 1px solid var(--fold);
+	}
+	.panel > a {
+		display: block;
+		text-decoration: none;
+		color: inherit;
+	}
+	.panel img {
+		margin-block-end: .9rem;
+	}
+	.panel h3 {
+		font-size: var(--yeti-text-lg);
+		font-weight: 700;
+		letter-spacing: -.01em;
+	}
+	.panel > a:hover h3 {
+		color: var(--ember);
+	}
+	.panel p {
+		color: var(--ink-muted);
+		font-size: var(--yeti-text-sm);
+	}
+
+	/* ---- The fee table on the Sessions page ------------------------------ */
+	.session {
+		padding-block: 1.75rem;
+		border-block-start: 1px solid var(--fold);
+		align-items: start;
+	}
+	.session:first-of-type {
+		border-block-start: 0;
+		padding-block-start: 0;
+	}
+	.session h3 {
+		font-size: var(--yeti-text-xl);
+		font-weight: 700;
+		letter-spacing: -.01em;
+	}
+	.session .fee {
+		font-size: var(--yeti-text-2xl);
+		font-weight: 800;
+		font-variant-numeric: tabular-nums;
+	}
+	.session .story {
+		font-family: var(--font-story);
+		font-size: var(--yeti-text-lg);
+		line-height: 1.4;
+	}
+	.session ul {
+		font-size: var(--yeti-text-sm);
+		padding-inline-start: 1.1em;
+	}
+	.session-facts {
+		display: grid;
+		gap: .35rem;
+		margin-block-start: .5rem;
+		font-size: var(--yeti-text-sm);
+	}
+	.session-facts dt {
+		color: var(--ink-muted);
+	}
+	.session-facts dd {
+		margin: 0;
+		font-weight: 600;
+	}
+
+	/* ---- The filter under the Work band --------------------------------- */
+	.filter {
+		padding-block: 1rem;
+		font-size: var(--yeti-text-sm);
+		font-weight: 600;
+	}
+	.filter a {
+		text-decoration: none;
+		color: var(--ink-muted);
+	}
+	.filter a:hover,
+	.filter a[aria-current] {
+		color: var(--ink);
+	}
+	.filter a[aria-current] {
+		text-decoration: underline;
+		text-decoration-color: var(--ember);
+		text-decoration-thickness: 2px;
+		text-underline-offset: .35em;
+	}
+
+	/* ---- Words ---------------------------------------------------------- */
+	.prose {
+		font-family: var(--font-story);
+		font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+		line-height: 1.55;
+		max-inline-size: 62ch;
+		text-wrap: pretty;
+	}
+	.prose > * + * {
+		margin-block-start: 1em;
+	}
+	.band blockquote {
+		font-family: var(--font-story);
+		font-size: clamp(1.6rem, 3.2vw, 2.9rem);
+		line-height: 1.2;
+		text-wrap: pretty;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	.band figcaption {
+		margin-block-start: auto;
+		font-size: var(--yeti-text-sm);
+		color: var(--on-band-muted);
+	}
+	.quotes blockquote {
+		font-size: clamp(1.2rem, 1.7vw, 1.45rem);
+		line-height: 1.35;
+	}
+	.notes article {
+		font-family: var(--font-story);
+	}
+	.notes h3 {
+		font-size: var(--yeti-text-xl);
+		line-height: 1.15;
+	}
+	.notes a {
+		text-decoration: none;
+	}
+	.notes a:hover {
+		color: var(--ember);
+	}
+	.notes .muted {
+		font-family: var(--yeti-font-sans);
+		font-size: var(--yeti-text-sm);
+	}
+
+	/* ---- Journal list --------------------------------------------------- */
+	.entry {
+		padding-block: 2rem;
+		border-block-start: 1px solid var(--fold);
+		align-items: center;
+	}
+	.entry h2 a {
+		text-decoration: none;
+	}
+	.entry h2 a:hover {
+		color: var(--ember);
+	}
+	.entry p:last-child {
+		font-family: var(--font-story);
+		font-size: var(--yeti-text-lg);
+	}
+
+	/* ---- Project: the cover's colors, and the way on ---------------------- */
+	.swatches {
+		padding-block: 2rem 0;
+	}
+	.swatches ul {
+		display: flex;
+	}
+	.swatches li {
+		flex: 1;
+		block-size: 1.25rem;
+	}
+	.swatches li[data-current] {
+		flex: 3;
+	}
+	.next {
+		padding-block: 0;
+		margin-block-start: clamp(3rem, 7vw, 6rem);
+	}
+	.next a {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: .5rem 2rem;
+		padding-block: clamp(2.5rem, 6vw, 5rem);
+		text-decoration: none;
+	}
+	.next strong {
+		font-size: clamp(2.2rem, 6vw, 5rem);
+		line-height: 1;
+		letter-spacing: -.03em;
+	}
+
+	/* ---- Prints: tall photos stay on one screen ------------------------- */
+	.print-photo img {
+		inline-size: auto;
+		max-inline-size: 100%;
+		max-block-size: 82svh;
+	}
+
+	/* ---- The readme page ------------------------------------------------- */
+	.readme {
+		max-inline-size: 60rem;
+	}
+
+	/* ---- Footer ---------------------------------------------------------- */
+	.footer {
+		font-size: var(--yeti-text-sm);
+	}
+	.footer-name {
+		font-size: var(--yeti-text-2xl);
+		font-weight: 800;
+		letter-spacing: -.02em;
+	}
+	.footer ul {
+		list-style: none;
+		padding: 0;
+	}
+	.footer a {
+		text-decoration: none;
+	}
+	.footer a:hover {
+		text-decoration: underline;
+		text-underline-offset: .25em;
+	}
+}
+
+/* ---- The gallery ------------------------------------------------------------
+   auto-fit instead of the default auto-fill, so three photos fill the row
+   rather than leaving an empty column at the end. */
+.cms-gallery {
+	grid-template-columns: repeat(auto-fit, minmax(var(--cms-gallery-min-size), 1fr));
+}
+
+/* ---- The Contact form ------------------------------------------------------
+   Total CMS draws the form and brings its own stylesheet. It's outside the layer
+   above so it wins over that stylesheet. Field borders and icons are left as they
+   come, because they already follow light and dark mode. */
+.totalform {
+	font-family: var(--yeti-font-sans);
+	--totalform-radius: 0;
+	--totalform-accent: 50% .14 48; /* The ember accent, in the form's own "lightness chroma hue" format. */
+}
+@media (prefers-color-scheme: dark) {
+	.totalform {
+		--totalform-accent: 76% .13 55;
+	}
+}
+.totalform .cms-save {
+	background: var(--ember);
+	border-color: var(--ember);
+	color: var(--paper);
+	border-radius: 0;
+}
+.totalform .cms-save::before {
+	display: none;
+}
+.totalform .cms-save:hover {
+	background: var(--ember-strong);
+	border-color: var(--ember-strong);
+}
+
+/* Motion is optional. Colors snap instead of fading for anyone who asks. */
+@media (prefers-reduced-motion: reduce) {
+	.band,
+	.nav {
+		transition: none;
+	}
+}

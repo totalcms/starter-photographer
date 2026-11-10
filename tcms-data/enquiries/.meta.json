@@ -1,0 +1,44 @@
+{
+    "id": "enquiries",
+    "schema": "enquiry",
+    "name": "Enquiries",
+    "description": "A collection of enquiries objects that conform to the enquiry schema.",
+    "url": "",
+    "category": "",
+    "labelPlural": "",
+    "labelSingular": "",
+    "groups": [],
+    "publicOperations": [
+        "create"
+    ],
+    "requireBotProtection": true,
+    "sortBy": "created",
+    "reverseSort": true,
+    "prettyUrl": false,
+    "singleton": false,
+    "format": "json",
+    "publicRegistration": false,
+    "requireEmailVerification": false,
+    "registrationGroups": [],
+    "ownerProperty": "",
+    "ownerCollection": "",
+    "accessCollection": "",
+    "queueRebuildOnSave": false,
+    "count": 3,
+    "totalObjects": 0,
+    "lastUpdated": "2026-11-05T23:04:49-08:00",
+    "updated": "2026-11-05T22:52:30-08:00",
+    "formSettings": {
+        "newActions": [
+            {
+                "action": "mailer",
+                "mailerId": "new-enquiry",
+                "continue": true
+            },
+            {
+                "action": "message",
+                "text": "Thank you. Your note is on its way, and I will write back soon."
+            }
+        ]
+    }
+}

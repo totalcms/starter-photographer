@@ -1,0 +1,48 @@
+{
+    "id": "info",
+    "name": "Wren Alder",
+    "tagline": "Wildlife, landscapes, cities and outdoor portraits, made from a small cabin in the North Cascades.",
+    "base": "North Cascades, Washington",
+    "email": "hello@example.com",
+    "phone": "(360) 555-0142",
+    "instagram": "https://www.instagram.com/",
+    "responseTime": "I reply within two working days.",
+    "portrait": {
+        "alt": "A photographer holding a camera in a sunlit field of dry grass",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "145078f3",
+        "height": 1800,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "wren-in-the-field.jpg",
+        "palette": [
+            "#c9b8a6",
+            "#a0a291",
+            "#907459",
+            "#21190e",
+            "#8e938c"
+        ],
+        "size": 292282,
+        "tags": [],
+        "uploadDate": "2026-11-05T22:49:58-08:00",
+        "width": 1200,
+        "credit": {
+            "author": "Sydney Sang",
+            "authorUrl": "https://www.pexels.com/@urfriendlyphotog/",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/35862261/",
+            "license": "Pexels License"
+        }
+    },
+    "intro": "I spent ten years photographing animals that didn't want to be photographed. It turns out that's good training for families.",
+    "story": "<p>Most of my year is spent outside, waiting. Waiting for a fox to come back along a fence line, for cloud to lift off a ridge, for a city to go quiet at five in the morning.</p><p>People sessions work the same way. I don't pose you. We pick a place you love, go at the hour when the light is kind, and walk. I stay out of the way until something real happens, and then I take the picture.</p><p>I work alone, so the person you write to is the person who turns up. Sessions happen anywhere within a day's drive of the Cascades, and further if you have a good reason.</p>",
+    "updated": "2026-11-05T22:49:58-08:00",
+    "created": "2026-11-05T22:48:32-08:00"
+}
